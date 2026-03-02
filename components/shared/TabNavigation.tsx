@@ -20,10 +20,10 @@ export default function TabNavigation({
   color = 'blue'
 }: TabNavigationProps) {
   const colorClasses = {
-    blue: 'border-blue-500 text-blue-600',
-    green: 'border-green-500 text-green-600',
-    purple: 'border-purple-500 text-purple-600',
-    teal: 'border-teal-500 text-teal-600'
+    blue: 'border-orange-500 text-orange-600',
+    green: 'border-orange-500 text-orange-600',
+    purple: 'border-orange-500 text-orange-700',
+    teal: 'border-orange-500 text-orange-600'
   };
 
   return (

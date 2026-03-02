@@ -5,8 +5,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'RK Institute Management System',
-  description: 'Comprehensive management system for RK Institute'
+  title: 'Rand Training College System',
+  description: 'Rand Training College - Excellence in Education'
 };
 
 export default function RootLayout({

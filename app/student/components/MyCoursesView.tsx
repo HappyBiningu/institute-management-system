@@ -83,7 +83,7 @@ export default function MyCoursesView() {
   if (loading) {
     return (
       <div className='flex items-center justify-center py-12'>
-        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>
+        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-orange-600'></div>
       </div>
     );
   }
@@ -117,7 +117,7 @@ export default function MyCoursesView() {
                     {course.name}
                   </h4>
                   <p className='text-sm text-gray-600 mb-2'>{course.grade}</p>
-                  <div className='inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800'>
+                  <div className='inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-800'>
                     📚 Course
                   </div>
                 </div>
@@ -136,7 +136,7 @@ export default function MyCoursesView() {
                 {course.feeStructure && (
                   <div className='flex justify-between items-center text-sm'>
                     <span className='text-gray-600'>Fee:</span>
-                    <span className='font-medium text-green-600'>
+                    <span className='font-medium text-orange-600'>
                       ₹{course.feeStructure.amount.toLocaleString()}/
                       {course.feeStructure.billingCycle.toLowerCase()}
                     </span>
@@ -146,11 +146,11 @@ export default function MyCoursesView() {
 
               <div className='mt-4 pt-4 border-t border-gray-200'>
                 <div className='flex items-center justify-between'>
-                  <span className='text-xs text-green-600 font-medium'>
+                  <span className='text-xs text-orange-600 font-medium'>
                     ✅ Enrolled
                   </span>
                   <div className='flex space-x-2'>
-                    <button className='text-xs text-blue-600 hover:text-blue-800 font-medium'>
+                    <button className='text-xs text-orange-600 hover:text-orange-800 font-medium'>
                       View Details
                     </button>
                   </div>
@@ -177,7 +177,7 @@ export default function MyCoursesView() {
                   <h4 className='font-semibold text-gray-900 mb-2'>
                     {service.name}
                   </h4>
-                  <div className='inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800'>
+                  <div className='inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-800'>
                     🚌 Service
                   </div>
                 </div>
@@ -191,7 +191,7 @@ export default function MyCoursesView() {
                 {service.feeStructure && (
                   <div className='flex justify-between items-center text-sm'>
                     <span className='text-gray-600'>Fee:</span>
-                    <span className='font-medium text-green-600'>
+                    <span className='font-medium text-orange-600'>
                       ₹{service.feeStructure.amount.toLocaleString()}/
                       {service.feeStructure.billingCycle.toLowerCase()}
                     </span>
@@ -201,11 +201,11 @@ export default function MyCoursesView() {
 
               <div className='mt-4 pt-4 border-t border-gray-200'>
                 <div className='flex items-center justify-between'>
-                  <span className='text-xs text-green-600 font-medium'>
+                  <span className='text-xs text-orange-600 font-medium'>
                     ✅ Active
                   </span>
                   <div className='flex space-x-2'>
-                    <button className='text-xs text-blue-600 hover:text-blue-800 font-medium'>
+                    <button className='text-xs text-orange-600 hover:text-orange-800 font-medium'>
                       View Details
                     </button>
                   </div>
@@ -217,25 +217,25 @@ export default function MyCoursesView() {
       </div>
 
       {/* Summary */}
-      <div className='bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-200 p-6'>
+      <div className='bg-gradient-to-r from-orange-50 to-orange-50 rounded-xl border border-orange-200 p-6'>
         <h3 className='text-lg font-semibold text-gray-900 mb-4'>
           📊 Enrollment Summary
         </h3>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
           <div className='text-center'>
-            <div className='text-2xl font-bold text-blue-600'>
+            <div className='text-2xl font-bold text-orange-600'>
               {courses.length}
             </div>
             <div className='text-sm text-gray-600'>Enrolled Courses</div>
           </div>
           <div className='text-center'>
-            <div className='text-2xl font-bold text-green-600'>
+            <div className='text-2xl font-bold text-orange-600'>
               {services.length}
             </div>
             <div className='text-sm text-gray-600'>Active Services</div>
           </div>
           <div className='text-center'>
-            <div className='text-2xl font-bold text-purple-600'>
+            <div className='text-2xl font-bold text-orange-700'>
               ₹
               {(
                 courses.reduce(
@@ -259,25 +259,25 @@ export default function MyCoursesView() {
           📅 Academic Calendar
         </h3>
         <div className='space-y-3'>
-          <div className='flex items-center justify-between p-3 bg-blue-50 rounded-lg'>
+          <div className='flex items-center justify-between p-3 bg-orange-50 rounded-lg'>
             <div className='flex items-center space-x-3'>
-              <div className='w-3 h-3 bg-blue-500 rounded-full'></div>
+              <div className='w-3 h-3 bg-orange-500 rounded-full'></div>
               <span className='font-medium text-gray-900'>
                 Mid-term Examinations
               </span>
             </div>
             <span className='text-sm text-gray-600'>March 15-22, 2024</span>
           </div>
-          <div className='flex items-center justify-between p-3 bg-green-50 rounded-lg'>
+          <div className='flex items-center justify-between p-3 bg-orange-50 rounded-lg'>
             <div className='flex items-center space-x-3'>
-              <div className='w-3 h-3 bg-green-500 rounded-full'></div>
+              <div className='w-3 h-3 bg-orange-500 rounded-full'></div>
               <span className='font-medium text-gray-900'>Spring Break</span>
             </div>
             <span className='text-sm text-gray-600'>April 1-7, 2024</span>
           </div>
-          <div className='flex items-center justify-between p-3 bg-purple-50 rounded-lg'>
+          <div className='flex items-center justify-between p-3 bg-orange-50 rounded-lg'>
             <div className='flex items-center space-x-3'>
-              <div className='w-3 h-3 bg-purple-500 rounded-full'></div>
+              <div className='w-3 h-3 bg-orange-500 rounded-full'></div>
               <span className='font-medium text-gray-900'>
                 Final Examinations
               </span>

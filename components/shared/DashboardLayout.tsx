@@ -29,9 +29,10 @@ export default function DashboardLayout({
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex justify-between items-center h-16'>
             <div className='flex items-center'>
-              <h1 className='text-2xl font-bold text-gray-900'>RK Institute</h1>
+              <img src='/logo.webp' alt='Rand Training College' className='h-10 w-auto mr-3' />
+              <h1 className='text-2xl font-bold text-gray-900'>Rand Training College</h1>
               {subtitle && (
-                <span className='ml-4 px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 text-sm font-medium rounded-full'>
+                <span className='ml-4 px-3 py-1 bg-gradient-to-r from-orange-100 to-orange-200 text-orange-800 text-sm font-medium rounded-full'>
                   {subtitle}
                 </span>
               )}

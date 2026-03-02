@@ -11,10 +11,10 @@ async function main() {
   const hashedPassword = await bcrypt.hash('admin123', 12);
 
   const adminUser = await prisma.user.upsert({
-    where: { email: 'admin@rkinstitute.com' },
+    where: { email: 'admin@randtrainingcollege.com' },
     update: {},
     create: {
-      email: 'admin@rkinstitute.com',
+      email: 'admin@randtrainingcollege.com',
       password: hashedPassword,
       name: 'System Administrator',
       role: 'ADMIN',
@@ -24,10 +24,10 @@ async function main() {
 
   // Create additional teachers
   const teacher1 = await prisma.user.upsert({
-    where: { email: 'teacher1@rkinstitute.com' },
+    where: { email: 'teacher1@randtrainingcollege.com' },
     update: {},
     create: {
-      email: 'teacher1@rkinstitute.com',
+      email: 'teacher1@randtrainingcollege.com',
       password: hashedPassword,
       name: 'Dr. Sarah Johnson',
       role: 'TEACHER',
@@ -36,10 +36,10 @@ async function main() {
   });
 
   const teacher2 = await prisma.user.upsert({
-    where: { email: 'teacher2@rkinstitute.com' },
+    where: { email: 'teacher2@randtrainingcollege.com' },
     update: {},
     create: {
-      email: 'teacher2@rkinstitute.com',
+      email: 'teacher2@randtrainingcollege.com',
       password: hashedPassword,
       name: 'Prof. Michael Chen',
       role: 'TEACHER',
@@ -114,10 +114,10 @@ async function main() {
 
   // Create parent user (linked to Johnson family)
   const parentUser = await prisma.user.upsert({
-    where: { email: 'parent@rkinstitute.com' },
+    where: { email: 'parent@randtrainingcollege.com' },
     update: {},
     create: {
-      email: 'parent@rkinstitute.com',
+      email: 'parent@randtrainingcollege.com',
       password: hashedPassword,
       name: 'Johnson Family Parent',
       role: 'PARENT',
@@ -128,10 +128,10 @@ async function main() {
 
   // Create student user (Emma Johnson)
   const studentUser = await prisma.user.upsert({
-    where: { email: 'student@rkinstitute.com' },
+    where: { email: 'student@randtrainingcollege.com' },
     update: {},
     create: {
-      email: 'student@rkinstitute.com',
+      email: 'student@randtrainingcollege.com',
       password: hashedPassword,
       name: 'Emma Johnson',
       role: 'STUDENT',
@@ -492,12 +492,12 @@ async function main() {
   console.log('   ✅ Realistic fee calculation scenarios');
   console.log('');
   console.log('📋 Login Credentials:');
-  console.log('   Admin: admin@rkinstitute.com / admin123');
-  console.log('   Teacher 1: teacher1@rkinstitute.com / admin123');
-  console.log('   Teacher 2: teacher2@rkinstitute.com / admin123');
+  console.log('   Admin: admin@randtrainingcollege.com / admin123');
+  console.log('   Teacher 1: teacher1@randtrainingcollege.com / admin123');
+  console.log('   Teacher 2: teacher2@randtrainingcollege.com / admin123');
   console.log('');
   console.log(
-    '🔗 Access the application at: https://rk-institute-management-system.vercel.app'
+    '🔗 Access the application at: https://rand-training-college-management-system.vercel.app'
   );
   console.log('');
   console.log('📈 Reports Dashboard will now show:');

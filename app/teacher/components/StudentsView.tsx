@@ -92,18 +92,18 @@ export default function StudentsView() {
   const getLogTypeColor = (logType: string) => {
     switch (logType) {
       case 'ACHIEVEMENT':
-        return 'text-green-600';
+        return 'text-orange-600';
       case 'CONCERN':
         return 'text-red-600';
       default:
-        return 'text-blue-600';
+        return 'text-orange-600';
     }
   };
 
   if (loading) {
     return (
       <div className='flex items-center justify-center py-12'>
-        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-teal-600'></div>
+        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-orange-600'></div>
       </div>
     );
   }
@@ -130,7 +130,7 @@ export default function StudentsView() {
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}
               placeholder='Search by name, student ID, or family name...'
-              className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent'
+              className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
             />
           </div>
           <div>
@@ -140,7 +140,7 @@ export default function StudentsView() {
             <select
               value={selectedGrade}
               onChange={e => setSelectedGrade(e.target.value)}
-              className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent'
+              className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
             >
               <option value=''>All Grades</option>
               {uniqueGrades.map(grade => (
@@ -162,7 +162,7 @@ export default function StudentsView() {
             onClick={() => setSelectedStudent(student)}
           >
             <div className='flex items-center space-x-4 mb-4'>
-              <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg'>
+              <div className='w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-700 rounded-full flex items-center justify-center text-white font-bold text-lg'>
                 {student.name.charAt(0)}
               </div>
               <div className='flex-1'>
@@ -170,7 +170,7 @@ export default function StudentsView() {
                 <p className='text-sm text-gray-600'>{student.studentId}</p>
               </div>
               <div
-                className={`w-3 h-3 rounded-full ${student.isActive ? 'bg-green-400' : 'bg-gray-400'}`}
+                className={`w-3 h-3 rounded-full ${student.isActive ? 'bg-orange-400' : 'bg-gray-400'}`}
               ></div>
             </div>
 
@@ -298,7 +298,7 @@ export default function StudentsView() {
                       <span
                         className={
                           selectedStudent.isActive
-                            ? 'text-green-600'
+                            ? 'text-orange-600'
                             : 'text-red-600'
                         }
                       >
@@ -342,7 +342,7 @@ export default function StudentsView() {
                           {subscription.course?.name ||
                             subscription.service?.name}
                         </span>
-                        <span className='text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded'>
+                        <span className='text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded'>
                           {subscription.course ? 'Course' : 'Service'}
                         </span>
                       </div>

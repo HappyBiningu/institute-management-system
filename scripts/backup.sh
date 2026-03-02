@@ -6,7 +6,7 @@
 set -e
 
 # Configuration
-BACKUP_DIR="/var/backups/rk-institute"
+BACKUP_DIR="/var/backups/rand-training-college"
 DATE=$(date +%Y%m%d_%H%M%S)
 BACKUP_FILE="rk_institute_backup_$DATE.sql"
 ENCRYPTED_FILE="$BACKUP_FILE.gpg"

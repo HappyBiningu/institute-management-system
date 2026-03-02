@@ -244,27 +244,27 @@ export default function FeesPage() {
                 Fee Summary
               </h3>
               <div className='grid grid-cols-1 gap-4 sm:grid-cols-3'>
-                <div className='bg-blue-50 rounded-xl p-4'>
-                  <div className='text-sm font-medium text-blue-600'>
+                <div className='bg-orange-50 rounded-xl p-4'>
+                  <div className='text-sm font-medium text-orange-600'>
                     Total Students
                   </div>
-                  <div className='text-2xl font-bold text-blue-900'>
+                  <div className='text-2xl font-bold text-orange-900'>
                     {feeCalculations.length}
                   </div>
                 </div>
-                <div className='bg-green-50 rounded-xl p-4'>
-                  <div className='text-sm font-medium text-green-600'>
+                <div className='bg-orange-50 rounded-xl p-4'>
+                  <div className='text-sm font-medium text-orange-600'>
                     Total Monthly Fees
                   </div>
-                  <div className='text-2xl font-bold text-green-900'>
+                  <div className='text-2xl font-bold text-orange-900'>
                     ₹{totalFamilyFees.toFixed(2)}
                   </div>
                 </div>
-                <div className='bg-purple-50 rounded-xl p-4'>
-                  <div className='text-sm font-medium text-purple-600'>
+                <div className='bg-orange-50 rounded-xl p-4'>
+                  <div className='text-sm font-medium text-orange-700'>
                     Total Discounts
                   </div>
-                  <div className='text-2xl font-bold text-purple-900'>
+                  <div className='text-2xl font-bold text-orange-900'>
                     ₹
                     {feeCalculations
                       .reduce((sum, calc) => sum + calc.totalDiscount, 0)
@@ -286,7 +286,7 @@ export default function FeesPage() {
                       <div className='text-sm text-gray-500'>
                         Net Monthly Fee
                       </div>
-                      <div className='text-2xl font-bold text-green-600'>
+                      <div className='text-2xl font-bold text-orange-600'>
                         ₹{calculation.netMonthlyFee.toFixed(2)}
                       </div>
                     </div>
@@ -309,11 +309,11 @@ export default function FeesPage() {
                         ₹{calculation.itemDiscounts.toFixed(2)}
                       </div>
                     </div>
-                    <div className='bg-pink-50 rounded-lg p-3'>
-                      <div className='text-sm font-medium text-pink-600'>
+                    <div className='bg-orange-50 rounded-lg p-3'>
+                      <div className='text-sm font-medium text-orange-600'>
                         Family Discount
                       </div>
-                      <div className='text-lg font-bold text-pink-900'>
+                      <div className='text-lg font-bold text-orange-900'>
                         ₹{calculation.familyDiscountShare.toFixed(2)}
                       </div>
                     </div>

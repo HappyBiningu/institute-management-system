@@ -72,7 +72,7 @@ export default function FamilyOverview({ familyProfile }: FamilyOverviewProps) {
               </div>
               <div className='flex justify-between'>
                 <span className='text-gray-600'>Family Discount:</span>
-                <span className='font-medium text-green-600'>
+                <span className='font-medium text-orange-600'>
                   ₹{familyProfile.discountAmount.toLocaleString()}
                 </span>
               </div>
@@ -93,7 +93,7 @@ export default function FamilyOverview({ familyProfile }: FamilyOverviewProps) {
                   className='flex items-center justify-between p-3 bg-gray-50 rounded-lg'
                 >
                   <div className='flex items-center space-x-3'>
-                    <div className='w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm'>
+                    <div className='w-8 h-8 bg-gradient-to-r from-orange-500 to-orange-700 rounded-full flex items-center justify-center text-white font-bold text-sm'>
                       {child.name.charAt(0)}
                     </div>
                     <div>

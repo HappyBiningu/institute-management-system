@@ -65,20 +65,20 @@ export default function LoginPage() {
     <div className='min-h-screen gradient-bg flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
       {/* Background decorations */}
       <div className='absolute inset-0 overflow-hidden'>
-        <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-full blur-3xl'></div>
-        <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-indigo-400/20 to-pink-600/20 rounded-full blur-3xl'></div>
+        <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-orange-400/20 to-orange-700/20 rounded-full blur-3xl'></div>
+        <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-orange-400/20 to-orange-600/20 rounded-full blur-3xl'></div>
       </div>
 
       <div className='max-w-md w-full space-y-8 relative z-10 animate-fade-in'>
         <div className='text-center'>
-          <div className='mx-auto h-16 w-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mb-6 shadow-xl'>
-            <span className='text-2xl font-bold text-white'>RK</span>
+          <div className='mx-auto mb-6'>
+            <img src='/logo.webp' alt='Rand Training College' className='h-24 w-auto mx-auto' />
           </div>
           <h2 className='text-4xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent'>
             Welcome Back
           </h2>
           <p className='mt-3 text-gray-600 font-medium'>
-            Sign in to RK Institute Management System
+            Sign in to Rand Training College System
           </p>
         </div>
         <div className='card animate-slide-up'>
@@ -148,7 +148,7 @@ export default function LoginPage() {
             <div className='text-center'>
               <a
                 href='/forgot-password'
-                className='text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors duration-200'
+                className='text-orange-600 hover:text-orange-700 text-sm font-medium transition-colors duration-200'
               >
                 Forgot your password?
               </a>

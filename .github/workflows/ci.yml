@@ -1,5 +1,5 @@
 # =============================================================================
-# RK Institute Management System - Continuous Integration Pipeline
+# Rand Training College Management System - Continuous Integration Pipeline
 # =============================================================================
 # This workflow runs on every push and pull request to ensure code quality
 # and prevent breaking changes from being merged into main branches.

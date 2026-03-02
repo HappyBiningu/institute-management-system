@@ -100,11 +100,11 @@ export default function PeopleSearchPage() {
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'student':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-orange-100 text-orange-800';
       case 'family':
-        return 'bg-green-100 text-green-800';
+        return 'bg-orange-100 text-orange-800';
       case 'user':
-        return 'bg-purple-100 text-purple-800';
+        return 'bg-orange-100 text-orange-800';
       default:
         return 'bg-gray-100 text-gray-800';
     }
@@ -148,7 +148,7 @@ export default function PeopleSearchPage() {
                 value={filters.query}
                 onChange={e => handleFilterChange('query', e.target.value)}
                 placeholder='Enter name, email, or ID...'
-                className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500'
+                className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500'
                 onKeyPress={e => e.key === 'Enter' && handleSearch()}
               />
             </div>
@@ -161,7 +161,7 @@ export default function PeopleSearchPage() {
               <select
                 value={filters.type}
                 onChange={e => handleFilterChange('type', e.target.value)}
-                className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500'
+                className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500'
               >
                 <option value='all'>All Types</option>
                 <option value='students'>Students</option>
@@ -178,7 +178,7 @@ export default function PeopleSearchPage() {
               <select
                 value={filters.status}
                 onChange={e => handleFilterChange('status', e.target.value)}
-                className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500'
+                className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500'
               >
                 <option value='all'>All Status</option>
                 <option value='active'>Active</option>
@@ -221,7 +221,7 @@ export default function PeopleSearchPage() {
             <button
               onClick={handleSearch}
               disabled={loading}
-              className='bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 disabled:from-gray-400 disabled:to-gray-500 text-white px-6 py-2 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl disabled:cursor-not-allowed'
+              className='bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 disabled:from-gray-400 disabled:to-gray-500 text-white px-6 py-2 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl disabled:cursor-not-allowed'
             >
               {loading ? (
                 <div className='flex items-center'>
@@ -244,7 +244,7 @@ export default function PeopleSearchPage() {
 
             {loading ? (
               <div className='text-center py-8'>
-                <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-4'></div>
+                <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500 mx-auto mb-4'></div>
                 <p className='text-gray-500'>Searching...</p>
               </div>
             ) : results.length === 0 ? (
@@ -289,7 +289,7 @@ export default function PeopleSearchPage() {
                       <span
                         className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                           result.status === 'active'
-                            ? 'bg-green-100 text-green-800'
+                            ? 'bg-orange-100 text-orange-800'
                             : 'bg-gray-100 text-gray-800'
                         }`}
                       >
@@ -297,7 +297,7 @@ export default function PeopleSearchPage() {
                       </span>
                       <Link
                         href={result.href}
-                        className='text-blue-600 hover:text-blue-800 text-sm font-medium'
+                        className='text-orange-600 hover:text-orange-800 text-sm font-medium'
                       >
                         View Details →
                       </Link>
@@ -310,11 +310,11 @@ export default function PeopleSearchPage() {
         )}
 
         {/* Search Tips */}
-        <div className='bg-blue-50 rounded-2xl border border-blue-200 p-6'>
-          <h3 className='text-lg font-semibold text-blue-900 mb-3'>
+        <div className='bg-orange-50 rounded-2xl border border-orange-200 p-6'>
+          <h3 className='text-lg font-semibold text-orange-900 mb-3'>
             Search Tips
           </h3>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-blue-800'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-orange-800'>
             <div>
               <h4 className='font-medium mb-2'>Search by:</h4>
               <ul className='space-y-1'>

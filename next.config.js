@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 // =============================================================================
-// RK Institute Management System - Production Next.js Configuration
+// Rand Training College Management System - Production Next.js Configuration
 // =============================================================================
 
 const nextConfig = {

@@ -184,7 +184,7 @@ export default function OperationsPage() {
       <AdminLayout>
         <div className='flex items-center justify-center min-h-96'>
           <div className='text-center'>
-            <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto'></div>
+            <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-orange-600 mx-auto'></div>
             <p className='mt-4 text-gray-600'>Loading automation status...</p>
           </div>
         </div>
@@ -242,7 +242,7 @@ export default function OperationsPage() {
                 onClick={() => setActiveTab(tab.id as any)}
                 className={`flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   activeTab === tab.id
-                    ? 'bg-white text-blue-600 shadow-sm'
+                    ? 'bg-white text-orange-600 shadow-sm'
                     : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
@@ -263,27 +263,27 @@ export default function OperationsPage() {
                     System Status
                   </h2>
                   <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-                    <div className='bg-green-50 rounded-xl p-4 border border-green-200'>
+                    <div className='bg-orange-50 rounded-xl p-4 border border-orange-200'>
                       <div className='flex items-center'>
-                        <div className='h-3 w-3 bg-green-500 rounded-full mr-3'></div>
+                        <div className='h-3 w-3 bg-orange-500 rounded-full mr-3'></div>
                         <div>
-                          <p className='text-sm font-medium text-green-800'>
+                          <p className='text-sm font-medium text-orange-800'>
                             Automation Engine
                           </p>
-                          <p className='text-xs text-green-600 capitalize'>
+                          <p className='text-xs text-orange-600 capitalize'>
                             {automationStatus.systemStatus.automationEngine}
                           </p>
                         </div>
                       </div>
                     </div>
-                    <div className='bg-blue-50 rounded-xl p-4 border border-blue-200'>
+                    <div className='bg-orange-50 rounded-xl p-4 border border-orange-200'>
                       <div className='flex items-center'>
-                        <div className='h-3 w-3 bg-blue-500 rounded-full mr-3'></div>
+                        <div className='h-3 w-3 bg-orange-500 rounded-full mr-3'></div>
                         <div>
-                          <p className='text-sm font-medium text-blue-800'>
+                          <p className='text-sm font-medium text-orange-800'>
                             Scheduler
                           </p>
-                          <p className='text-xs text-blue-600 capitalize'>
+                          <p className='text-xs text-orange-600 capitalize'>
                             {automationStatus.systemStatus.scheduler}
                           </p>
                         </div>
@@ -313,7 +313,7 @@ export default function OperationsPage() {
                     <button
                       onClick={triggerMonthlyBilling}
                       disabled={triggeringJob === 'monthly-billing'}
-                      className='bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 disabled:from-gray-400 disabled:to-gray-500 text-white px-6 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl disabled:cursor-not-allowed'
+                      className='bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 disabled:from-gray-400 disabled:to-gray-500 text-white px-6 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl disabled:cursor-not-allowed'
                     >
                       {triggeringJob === 'monthly-billing' ? (
                         <div className='flex items-center justify-center'>
@@ -341,7 +341,7 @@ export default function OperationsPage() {
                     <button
                       onClick={() => triggerReport('monthly')}
                       disabled={triggeringJob === 'report-monthly'}
-                      className='bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 disabled:from-gray-400 disabled:to-gray-500 text-white px-6 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl disabled:cursor-not-allowed'
+                      className='bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-700 hover:to-orange-700 disabled:from-gray-400 disabled:to-gray-500 text-white px-6 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl disabled:cursor-not-allowed'
                     >
                       {triggeringJob === 'report-monthly' ? (
                         <div className='flex items-center justify-center'>
@@ -388,7 +388,7 @@ export default function OperationsPage() {
                     <button
                       onClick={() => triggerFeeReminder('due')}
                       disabled={triggeringJob === 'fee-reminder-due'}
-                      className='bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 disabled:from-gray-400 disabled:to-gray-500 text-white px-6 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl disabled:cursor-not-allowed'
+                      className='bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 disabled:from-gray-400 disabled:to-gray-500 text-white px-6 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl disabled:cursor-not-allowed'
                     >
                       {triggeringJob === 'fee-reminder-due' ? (
                         <div className='flex items-center justify-center'>
@@ -443,16 +443,16 @@ export default function OperationsPage() {
                       </div>
                       <div className='text-yellow-600'>📅</div>
                     </div>
-                    <div className='flex items-center justify-between p-4 bg-blue-50 rounded-xl border border-blue-200'>
+                    <div className='flex items-center justify-between p-4 bg-orange-50 rounded-xl border border-orange-200'>
                       <div>
-                        <h3 className='font-semibold text-blue-800'>
+                        <h3 className='font-semibold text-orange-800'>
                           Due Date Reminders
                         </h3>
-                        <p className='text-sm text-blue-600'>
+                        <p className='text-sm text-orange-600'>
                           Daily at 10:00 AM - on due date
                         </p>
                       </div>
-                      <div className='text-blue-600'>⏰</div>
+                      <div className='text-orange-600'>⏰</div>
                     </div>
                     <div className='flex items-center justify-between p-4 bg-red-50 rounded-xl border border-red-200'>
                       <div>
@@ -481,7 +481,7 @@ export default function OperationsPage() {
                     <button
                       onClick={() => triggerReport('weekly')}
                       disabled={triggeringJob === 'report-weekly'}
-                      className='bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 disabled:from-gray-400 disabled:to-gray-500 text-white px-6 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl disabled:cursor-not-allowed'
+                      className='bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 disabled:from-gray-400 disabled:to-gray-500 text-white px-6 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl disabled:cursor-not-allowed'
                     >
                       {triggeringJob === 'report-weekly' ? (
                         <div className='flex items-center justify-center'>
@@ -499,7 +499,7 @@ export default function OperationsPage() {
                     <button
                       onClick={() => triggerReport('monthly')}
                       disabled={triggeringJob === 'report-monthly'}
-                      className='bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 disabled:from-gray-400 disabled:to-gray-500 text-white px-6 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl disabled:cursor-not-allowed'
+                      className='bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-700 hover:to-orange-700 disabled:from-gray-400 disabled:to-gray-500 text-white px-6 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl disabled:cursor-not-allowed'
                     >
                       {triggeringJob === 'report-monthly' ? (
                         <div className='flex items-center justify-center'>
@@ -545,27 +545,27 @@ export default function OperationsPage() {
                     Automated Report Schedule
                   </h2>
                   <div className='space-y-4'>
-                    <div className='flex items-center justify-between p-4 bg-green-50 rounded-xl border border-green-200'>
+                    <div className='flex items-center justify-between p-4 bg-orange-50 rounded-xl border border-orange-200'>
                       <div>
-                        <h3 className='font-semibold text-green-800'>
+                        <h3 className='font-semibold text-orange-800'>
                           Weekly Reports
                         </h3>
-                        <p className='text-sm text-green-600'>
+                        <p className='text-sm text-orange-600'>
                           Every Monday at 8:00 AM
                         </p>
                       </div>
-                      <div className='text-green-600'>📊</div>
+                      <div className='text-orange-600'>📊</div>
                     </div>
-                    <div className='flex items-center justify-between p-4 bg-purple-50 rounded-xl border border-purple-200'>
+                    <div className='flex items-center justify-between p-4 bg-orange-50 rounded-xl border border-orange-200'>
                       <div>
-                        <h3 className='font-semibold text-purple-800'>
+                        <h3 className='font-semibold text-orange-800'>
                           Monthly Reports
                         </h3>
-                        <p className='text-sm text-purple-600'>
+                        <p className='text-sm text-orange-700'>
                           1st day of every month at 8:00 AM
                         </p>
                       </div>
-                      <div className='text-purple-600'>📈</div>
+                      <div className='text-orange-700'>📈</div>
                     </div>
                     <div className='flex items-center justify-between p-4 bg-orange-50 rounded-xl border border-orange-200'>
                       <div>
@@ -613,7 +613,7 @@ export default function OperationsPage() {
                           <div
                             className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                               job.isActive
-                                ? 'bg-green-100 text-green-800'
+                                ? 'bg-orange-100 text-orange-800'
                                 : 'bg-gray-100 text-gray-800'
                             }`}
                           >
@@ -669,9 +669,9 @@ export default function OperationsPage() {
                           <div
                             className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                               job.status === 'RUNNING'
-                                ? 'bg-blue-100 text-blue-800'
+                                ? 'bg-orange-100 text-orange-800'
                                 : job.status === 'COMPLETED'
-                                  ? 'bg-green-100 text-green-800'
+                                  ? 'bg-orange-100 text-orange-800'
                                   : 'bg-red-100 text-red-800'
                             }`}
                           >

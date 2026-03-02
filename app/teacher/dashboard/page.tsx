@@ -129,7 +129,7 @@ export default function TeacherDashboard() {
   if (loading) {
     return (
       <div className='min-h-screen bg-gray-50 flex items-center justify-center'>
-        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-teal-600'></div>
+        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-orange-600'></div>
       </div>
     );
   }
@@ -141,8 +141,9 @@ export default function TeacherDashboard() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex justify-between items-center h-16'>
             <div className='flex items-center'>
-              <h1 className='text-2xl font-bold text-gray-900'>RK Institute</h1>
-              <span className='ml-4 px-3 py-1 bg-gradient-to-r from-teal-100 to-blue-100 text-teal-800 text-sm font-medium rounded-full'>
+              <img src='/logo.webp' alt='Rand Training College' className='h-10 w-auto mr-3' />
+              <h1 className='text-2xl font-bold text-gray-900'>Rand Training College</h1>
+              <span className='ml-4 px-3 py-1 bg-gradient-to-r from-orange-100 to-orange-200 text-orange-800 text-sm font-medium rounded-full'>
                 🎓 Teacher&apos;s Toolkit
               </span>
             </div>
@@ -178,7 +179,7 @@ export default function TeacherDashboard() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
                   activeTab === tab.id
-                    ? 'border-teal-500 text-teal-600'
+                    ? 'border-orange-500 text-orange-600'
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                 }`}
               >
@@ -195,7 +196,7 @@ export default function TeacherDashboard() {
         {activeTab === 'overview' && (
           <div className='space-y-8'>
             {/* Welcome Section */}
-            <div className='bg-gradient-to-r from-teal-500 via-blue-600 to-purple-600 rounded-xl shadow-lg p-8 text-white'>
+            <div className='bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 rounded-xl shadow-lg p-8 text-white'>
               <h2 className='text-3xl font-bold mb-4'>
                 Teacher&apos;s Dashboard
               </h2>
@@ -231,11 +232,11 @@ export default function TeacherDashboard() {
                     <p className='text-3xl font-bold text-gray-900'>
                       {stats.totalStudents}
                     </p>
-                    <p className='text-sm text-green-600 mt-1'>
+                    <p className='text-sm text-orange-600 mt-1'>
                       Active learners
                     </p>
                   </div>
-                  <div className='p-3 bg-blue-100 rounded-lg'>
+                  <div className='p-3 bg-orange-100 rounded-lg'>
                     <span className='text-3xl'>👨‍🎓</span>
                   </div>
                 </div>
@@ -250,11 +251,11 @@ export default function TeacherDashboard() {
                     <p className='text-3xl font-bold text-gray-900'>
                       {stats.totalCourses}
                     </p>
-                    <p className='text-sm text-blue-600 mt-1'>
+                    <p className='text-sm text-orange-600 mt-1'>
                       Teaching subjects
                     </p>
                   </div>
-                  <div className='p-3 bg-green-100 rounded-lg'>
+                  <div className='p-3 bg-orange-100 rounded-lg'>
                     <span className='text-3xl'>📚</span>
                   </div>
                 </div>
@@ -269,11 +270,11 @@ export default function TeacherDashboard() {
                     <p className='text-3xl font-bold text-gray-900'>
                       {stats.totalLogs}
                     </p>
-                    <p className='text-sm text-purple-600 mt-1'>
+                    <p className='text-sm text-orange-700 mt-1'>
                       Progress records
                     </p>
                   </div>
-                  <div className='p-3 bg-purple-100 rounded-lg'>
+                  <div className='p-3 bg-orange-100 rounded-lg'>
                     <span className='text-3xl'>📝</span>
                   </div>
                 </div>
@@ -285,10 +286,10 @@ export default function TeacherDashboard() {
                     <p className='text-sm font-medium text-gray-600'>
                       Achievements
                     </p>
-                    <p className='text-3xl font-bold text-green-600'>
+                    <p className='text-3xl font-bold text-orange-600'>
                       {stats.achievements}
                     </p>
-                    <p className='text-sm text-green-600 mt-1'>
+                    <p className='text-sm text-orange-600 mt-1'>
                       Student successes
                     </p>
                   </div>
@@ -304,14 +305,14 @@ export default function TeacherDashboard() {
                     <p className='text-sm font-medium text-gray-600'>
                       Progress Reports
                     </p>
-                    <p className='text-3xl font-bold text-blue-600'>
+                    <p className='text-3xl font-bold text-orange-600'>
                       {stats.progressReports}
                     </p>
-                    <p className='text-sm text-blue-600 mt-1'>
+                    <p className='text-sm text-orange-600 mt-1'>
                       Regular updates
                     </p>
                   </div>
-                  <div className='p-3 bg-indigo-100 rounded-lg'>
+                  <div className='p-3 bg-orange-100 rounded-lg'>
                     <span className='text-3xl'>📊</span>
                   </div>
                 </div>
@@ -342,7 +343,7 @@ export default function TeacherDashboard() {
                 className='bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-200 text-left group'
               >
                 <div className='flex items-center'>
-                  <div className='p-3 bg-indigo-100 rounded-lg group-hover:bg-indigo-200 transition-colors'>
+                  <div className='p-3 bg-orange-100 rounded-lg group-hover:bg-orange-200 transition-colors'>
                     <span className='text-2xl'>📋</span>
                   </div>
                   <div className='ml-4'>
@@ -361,7 +362,7 @@ export default function TeacherDashboard() {
                 className='bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-200 text-left group'
               >
                 <div className='flex items-center'>
-                  <div className='p-3 bg-teal-100 rounded-lg group-hover:bg-teal-200 transition-colors'>
+                  <div className='p-3 bg-orange-100 rounded-lg group-hover:bg-orange-200 transition-colors'>
                     <span className='text-2xl'>📝</span>
                   </div>
                   <div className='ml-4'>
@@ -380,7 +381,7 @@ export default function TeacherDashboard() {
                 className='bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-200 text-left group'
               >
                 <div className='flex items-center'>
-                  <div className='p-3 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition-colors'>
+                  <div className='p-3 bg-orange-100 rounded-lg group-hover:bg-orange-200 transition-colors'>
                     <span className='text-2xl'>👥</span>
                   </div>
                   <div className='ml-4'>
@@ -399,7 +400,7 @@ export default function TeacherDashboard() {
                 className='bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-200 text-left group'
               >
                 <div className='flex items-center'>
-                  <div className='p-3 bg-purple-100 rounded-lg group-hover:bg-purple-200 transition-colors'>
+                  <div className='p-3 bg-orange-100 rounded-lg group-hover:bg-orange-200 transition-colors'>
                     <span className='text-2xl'>📚</span>
                   </div>
                   <div className='ml-4'>

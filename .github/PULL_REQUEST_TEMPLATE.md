@@ -1,4 +1,4 @@
-# 🚀 Pull Request - RK Institute Management System
+# 🚀 Pull Request - Rand Training College Management System
 
 ## 📋 **Pull Request Information**
 

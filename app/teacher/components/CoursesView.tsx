@@ -75,13 +75,13 @@ export default function CoursesView() {
   const getEnrollmentColor = (percentage: number) => {
     if (percentage >= 90) return 'text-red-600 bg-red-100';
     if (percentage >= 70) return 'text-yellow-600 bg-yellow-100';
-    return 'text-green-600 bg-green-100';
+    return 'text-orange-600 bg-orange-100';
   };
 
   if (loading) {
     return (
       <div className='flex items-center justify-center py-12'>
-        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-teal-600'></div>
+        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-orange-600'></div>
       </div>
     );
   }
@@ -115,7 +115,7 @@ export default function CoursesView() {
                   <div
                     className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
                       course.isActive
-                        ? 'bg-green-100 text-green-800'
+                        ? 'bg-orange-100 text-orange-800'
                         : 'bg-gray-100 text-gray-800'
                     }`}
                   >
@@ -150,7 +150,7 @@ export default function CoursesView() {
                         ? 'bg-red-500'
                         : enrollmentPercentage >= 70
                           ? 'bg-yellow-500'
-                          : 'bg-green-500'
+                          : 'bg-orange-500'
                     }`}
                     style={{ width: `${enrollmentPercentage}%` }}
                   ></div>
@@ -277,7 +277,7 @@ export default function CoursesView() {
                         <span
                           className={
                             selectedCourse.isActive
-                              ? 'text-green-600'
+                              ? 'text-orange-600'
                               : 'text-red-600'
                           }
                         >
@@ -319,7 +319,7 @@ export default function CoursesView() {
                             ? 'bg-red-500'
                             : getEnrollmentPercentage(selectedCourse) >= 70
                               ? 'bg-yellow-500'
-                              : 'bg-green-500'
+                              : 'bg-orange-500'
                         }`}
                         style={{
                           width: `${getEnrollmentPercentage(selectedCourse)}%`
@@ -347,7 +347,7 @@ export default function CoursesView() {
                         className='bg-gray-50 rounded-lg p-3'
                       >
                         <div className='flex items-center space-x-3'>
-                          <div className='w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm'>
+                          <div className='w-8 h-8 bg-gradient-to-r from-orange-500 to-orange-700 rounded-full flex items-center justify-center text-white font-bold text-sm'>
                             {subscription.student.name.charAt(0)}
                           </div>
                           <div className='flex-1'>

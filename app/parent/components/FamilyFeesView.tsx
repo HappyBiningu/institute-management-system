@@ -138,7 +138,7 @@ export default function FamilyFeesView({ selectedChild }: FamilyFeesViewProps) {
 
   const getStatusColor = (status: string) => {
     return status === 'PAID'
-      ? 'text-green-600 bg-green-100'
+      ? 'text-orange-600 bg-orange-100'
       : 'text-red-600 bg-red-100';
   };
 
@@ -176,7 +176,7 @@ export default function FamilyFeesView({ selectedChild }: FamilyFeesViewProps) {
             💳 Current Month Fee Breakdown by Child
           </h3>
           <div className='space-y-4'>
-            <div className='bg-blue-50 rounded-lg p-4'>
+            <div className='bg-orange-50 rounded-lg p-4'>
               <h4 className='font-medium text-gray-900 mb-3'>
                 Emma Johnson (Grade 11)
               </h4>
@@ -198,13 +198,13 @@ export default function FamilyFeesView({ selectedChild }: FamilyFeesViewProps) {
                   <div className='font-medium'>₹1,500</div>
                 </div>
               </div>
-              <div className='mt-3 pt-3 border-t border-blue-200 flex justify-between'>
+              <div className='mt-3 pt-3 border-t border-orange-200 flex justify-between'>
                 <span className='font-medium'>Net Amount:</span>
-                <span className='font-bold text-blue-600'>₹8,250</span>
+                <span className='font-bold text-orange-600'>₹8,250</span>
               </div>
             </div>
 
-            <div className='bg-green-50 rounded-lg p-4'>
+            <div className='bg-orange-50 rounded-lg p-4'>
               <h4 className='font-medium text-gray-900 mb-3'>
                 Liam Johnson (Grade 9)
               </h4>
@@ -226,16 +226,16 @@ export default function FamilyFeesView({ selectedChild }: FamilyFeesViewProps) {
                   <div className='font-medium'>₹2,200</div>
                 </div>
               </div>
-              <div className='mt-3 pt-3 border-t border-green-200 flex justify-between'>
+              <div className='mt-3 pt-3 border-t border-orange-200 flex justify-between'>
                 <span className='font-medium'>Net Amount:</span>
-                <span className='font-bold text-green-600'>₹7,000</span>
+                <span className='font-bold text-orange-600'>₹7,000</span>
               </div>
             </div>
 
             <div className='bg-gray-50 rounded-lg p-4'>
               <div className='flex justify-between items-center text-lg font-bold'>
                 <span>Family Total (After Discounts):</span>
-                <span className='text-purple-600'>₹15,250</span>
+                <span className='text-orange-700'>₹15,250</span>
               </div>
               <div className='text-sm text-gray-600 mt-1'>
                 Family Discount Applied: ₹500 (distributed proportionally)
@@ -283,7 +283,7 @@ export default function FamilyFeesView({ selectedChild }: FamilyFeesViewProps) {
                   ₹{allocation.netAmount.toLocaleString()}
                 </div>
                 {allocation.discountAmount > 0 && (
-                  <div className='text-sm text-green-600'>
+                  <div className='text-sm text-orange-600'>
                     Discount: ₹{allocation.discountAmount.toLocaleString()}
                   </div>
                 )}
@@ -305,7 +305,7 @@ export default function FamilyFeesView({ selectedChild }: FamilyFeesViewProps) {
               className='flex items-center justify-between p-4 border border-gray-200 rounded-lg'
             >
               <div className='flex items-center space-x-4'>
-                <div className='p-2 bg-green-100 rounded-lg'>
+                <div className='p-2 bg-orange-100 rounded-lg'>
                   <span className='text-lg'>
                     {getPaymentMethodIcon(payment.paymentMethod)}
                   </span>
@@ -326,7 +326,7 @@ export default function FamilyFeesView({ selectedChild }: FamilyFeesViewProps) {
                   </div>
                 </div>
               </div>
-              <div className='text-green-600 font-medium'>✅ Completed</div>
+              <div className='text-orange-600 font-medium'>✅ Completed</div>
             </div>
           ))}
         </div>
@@ -351,7 +351,7 @@ export default function FamilyFeesView({ selectedChild }: FamilyFeesViewProps) {
               <strong>Office Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM
             </p>
             <p>
-              <strong>Contact:</strong> +1-217-555-0100 | fees@rkinstitute.com
+              <strong>Contact:</strong> +1-217-555-0100 | fees@randtrainingcollege.com
             </p>
           </div>
         </div>

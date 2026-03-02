@@ -1,6 +1,6 @@
 ---
 name: 🐛 Bug Report
-about: Create a report to help us improve the RK Institute Management System
+about: Create a report to help us improve the Rand Training College Management System
 title: '[BUG] '
 labels: ['bug', 'needs-triage']
 assignees: ['IamNeoNerd']
@@ -67,7 +67,7 @@ assignees: ['IamNeoNerd']
 
 ### **Application Details**
 
-- **URL**: [e.g., https://rk-institute-management-system.vercel.app/admin]
+- **URL**: [e.g., https://rand-training-college-management-system.vercel.app/admin]
 - **User Role**: [e.g., Admin, Teacher, Parent, Student]
 - **Feature Area**: [e.g., Fee Calculation, Academic Logs, Authentication]
 

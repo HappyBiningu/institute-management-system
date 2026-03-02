@@ -121,7 +121,7 @@ export default function StudentDashboard() {
   if (loading) {
     return (
       <div className='min-h-screen bg-gray-50 flex items-center justify-center'>
-        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>
+        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-orange-600'></div>
       </div>
     );
   }
@@ -133,8 +133,9 @@ export default function StudentDashboard() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex justify-between items-center h-16'>
             <div className='flex items-center'>
-              <h1 className='text-2xl font-bold text-gray-900'>RK Institute</h1>
-              <span className='ml-4 px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 text-sm font-medium rounded-full'>
+              <img src='/logo.webp' alt='Rand Training College' className='h-10 w-auto mr-3' />
+              <h1 className='text-2xl font-bold text-gray-900'>Rand Training College</h1>
+              <span className='ml-4 px-3 py-1 bg-gradient-to-r from-orange-100 to-orange-200 text-orange-800 text-sm font-medium rounded-full'>
                 🎓 Student Portal
               </span>
             </div>
@@ -172,7 +173,7 @@ export default function StudentDashboard() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
                   activeTab === tab.id
-                    ? 'border-blue-500 text-blue-600'
+                    ? 'border-orange-500 text-orange-600'
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                 }`}
               >
@@ -189,7 +190,7 @@ export default function StudentDashboard() {
         {activeTab === 'overview' && (
           <div className='space-y-8'>
             {/* Welcome Section */}
-            <div className='bg-gradient-to-r from-blue-500 via-purple-600 to-indigo-600 rounded-xl shadow-lg p-8 text-white'>
+            <div className='bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 rounded-xl shadow-lg p-8 text-white'>
               <h2 className='text-3xl font-bold mb-4'>
                 Welcome Back, {studentProfile?.name}!
               </h2>
@@ -227,11 +228,11 @@ export default function StudentDashboard() {
                     <p className='text-3xl font-bold text-gray-900'>
                       {stats.totalCourses}
                     </p>
-                    <p className='text-sm text-blue-600 mt-1'>
+                    <p className='text-sm text-orange-600 mt-1'>
                       Active subjects
                     </p>
                   </div>
-                  <div className='p-3 bg-blue-100 rounded-lg'>
+                  <div className='p-3 bg-orange-100 rounded-lg'>
                     <span className='text-3xl'>📚</span>
                   </div>
                 </div>
@@ -246,11 +247,11 @@ export default function StudentDashboard() {
                     <p className='text-3xl font-bold text-gray-900'>
                       {stats.totalServices}
                     </p>
-                    <p className='text-sm text-green-600 mt-1'>
+                    <p className='text-sm text-orange-600 mt-1'>
                       Active services
                     </p>
                   </div>
-                  <div className='p-3 bg-green-100 rounded-lg'>
+                  <div className='p-3 bg-orange-100 rounded-lg'>
                     <span className='text-3xl'>🚌</span>
                   </div>
                 </div>
@@ -265,11 +266,11 @@ export default function StudentDashboard() {
                     <p className='text-3xl font-bold text-gray-900'>
                       ₹{stats.currentMonthFee.toLocaleString()}
                     </p>
-                    <p className='text-sm text-purple-600 mt-1'>
+                    <p className='text-sm text-orange-700 mt-1'>
                       Current month
                     </p>
                   </div>
-                  <div className='p-3 bg-purple-100 rounded-lg'>
+                  <div className='p-3 bg-orange-100 rounded-lg'>
                     <span className='text-3xl'>💰</span>
                   </div>
                 </div>
@@ -282,12 +283,12 @@ export default function StudentDashboard() {
                       Outstanding Dues
                     </p>
                     <p
-                      className={`text-3xl font-bold ${stats.outstandingDues > 0 ? 'text-red-600' : 'text-green-600'}`}
+                      className={`text-3xl font-bold ${stats.outstandingDues > 0 ? 'text-red-600' : 'text-orange-600'}`}
                     >
                       ₹{stats.outstandingDues.toLocaleString()}
                     </p>
                     <p
-                      className={`text-sm mt-1 ${stats.outstandingDues > 0 ? 'text-red-600' : 'text-green-600'}`}
+                      className={`text-sm mt-1 ${stats.outstandingDues > 0 ? 'text-red-600' : 'text-orange-600'}`}
                     >
                       {stats.outstandingDues > 0
                         ? 'Payment pending'
@@ -295,7 +296,7 @@ export default function StudentDashboard() {
                     </p>
                   </div>
                   <div
-                    className={`p-3 rounded-lg ${stats.outstandingDues > 0 ? 'bg-red-100' : 'bg-green-100'}`}
+                    className={`p-3 rounded-lg ${stats.outstandingDues > 0 ? 'bg-red-100' : 'bg-orange-100'}`}
                   >
                     <span className='text-3xl'>
                       {stats.outstandingDues > 0 ? '⚠️' : '✅'}
@@ -313,11 +314,11 @@ export default function StudentDashboard() {
                     <p className='text-3xl font-bold text-gray-900'>
                       {stats.academicLogs}
                     </p>
-                    <p className='text-sm text-indigo-600 mt-1'>
+                    <p className='text-sm text-orange-600 mt-1'>
                       Progress records
                     </p>
                   </div>
-                  <div className='p-3 bg-indigo-100 rounded-lg'>
+                  <div className='p-3 bg-orange-100 rounded-lg'>
                     <span className='text-3xl'>📝</span>
                   </div>
                 </div>
@@ -350,7 +351,7 @@ export default function StudentDashboard() {
                 className='bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-200 text-left group'
               >
                 <div className='flex items-center'>
-                  <div className='p-3 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition-colors'>
+                  <div className='p-3 bg-orange-100 rounded-lg group-hover:bg-orange-200 transition-colors'>
                     <span className='text-2xl'>📚</span>
                   </div>
                   <div className='ml-4'>
@@ -369,7 +370,7 @@ export default function StudentDashboard() {
                 className='bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-200 text-left group'
               >
                 <div className='flex items-center'>
-                  <div className='p-3 bg-green-100 rounded-lg group-hover:bg-green-200 transition-colors'>
+                  <div className='p-3 bg-orange-100 rounded-lg group-hover:bg-orange-200 transition-colors'>
                     <span className='text-2xl'>💰</span>
                   </div>
                   <div className='ml-4'>
@@ -388,7 +389,7 @@ export default function StudentDashboard() {
                 className='bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-200 text-left group'
               >
                 <div className='flex items-center'>
-                  <div className='p-3 bg-indigo-100 rounded-lg group-hover:bg-indigo-200 transition-colors'>
+                  <div className='p-3 bg-orange-100 rounded-lg group-hover:bg-orange-200 transition-colors'>
                     <span className='text-2xl'>📋</span>
                   </div>
                   <div className='ml-4'>
@@ -407,7 +408,7 @@ export default function StudentDashboard() {
                 className='bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-200 text-left group'
               >
                 <div className='flex items-center'>
-                  <div className='p-3 bg-purple-100 rounded-lg group-hover:bg-purple-200 transition-colors'>
+                  <div className='p-3 bg-orange-100 rounded-lg group-hover:bg-orange-200 transition-colors'>
                     <span className='text-2xl'>📝</span>
                   </div>
                   <div className='ml-4'>

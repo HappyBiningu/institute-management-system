@@ -122,11 +122,11 @@ export default function AcademicLogsManager() {
   const getLogTypeColor = (logType: string) => {
     switch (logType) {
       case 'ACHIEVEMENT':
-        return 'bg-green-100 text-green-800';
+        return 'bg-orange-100 text-orange-800';
       case 'CONCERN':
         return 'bg-red-100 text-red-800';
       default:
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-orange-100 text-orange-800';
     }
   };
 
@@ -144,7 +144,7 @@ export default function AcademicLogsManager() {
   if (loading) {
     return (
       <div className='flex items-center justify-center py-12'>
-        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-teal-600'></div>
+        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-orange-600'></div>
       </div>
     );
   }
@@ -163,7 +163,7 @@ export default function AcademicLogsManager() {
         </div>
         <button
           onClick={() => setShowCreateForm(true)}
-          className='bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors'
+          className='bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors'
         >
           + Create New Log
         </button>
@@ -187,7 +187,7 @@ export default function AcademicLogsManager() {
                   onChange={e =>
                     setFormData({ ...formData, studentId: e.target.value })
                   }
-                  className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent'
+                  className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
                   required
                 >
                   <option value=''>Select a student</option>
@@ -210,7 +210,7 @@ export default function AcademicLogsManager() {
                   onChange={e =>
                     setFormData({ ...formData, title: e.target.value })
                   }
-                  className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent'
+                  className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
                   placeholder='Enter log title'
                   required
                 />
@@ -229,7 +229,7 @@ export default function AcademicLogsManager() {
                         logType: e.target.value as any
                       })
                     }
-                    className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent'
+                    className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
                   >
                     <option value='PROGRESS'>Progress Update</option>
                     <option value='ACHIEVEMENT'>Achievement</option>
@@ -247,7 +247,7 @@ export default function AcademicLogsManager() {
                     onChange={e =>
                       setFormData({ ...formData, subject: e.target.value })
                     }
-                    className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent'
+                    className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
                     placeholder='e.g., Mathematics, Science'
                     required
                   />
@@ -264,7 +264,7 @@ export default function AcademicLogsManager() {
                     setFormData({ ...formData, content: e.target.value })
                   }
                   rows={4}
-                  className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent'
+                  className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
                   placeholder="Describe the student's progress, achievement, or concern..."
                   required
                 />
@@ -278,7 +278,7 @@ export default function AcademicLogsManager() {
                   onChange={e =>
                     setFormData({ ...formData, isPrivate: e.target.checked })
                   }
-                  className='h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 rounded'
+                  className='h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded'
                 />
                 <label
                   htmlFor='isPrivate'
@@ -298,7 +298,7 @@ export default function AcademicLogsManager() {
                 </button>
                 <button
                   type='submit'
-                  className='px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors'
+                  className='px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors'
                 >
                   Create Log
                 </button>
@@ -323,7 +323,7 @@ export default function AcademicLogsManager() {
             </p>
             <button
               onClick={() => setShowCreateForm(true)}
-              className='bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors'
+              className='bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors'
             >
               Create First Log
             </button>

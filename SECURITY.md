@@ -1,8 +1,8 @@
-# 🔒 RK Institute Management System - Security Guide
+# 🔒 Rand Training College Management System - Security Guide
 
 ## **📋 Security Overview**
 
-This document outlines the comprehensive security measures implemented in the RK Institute Management System and provides configuration guidelines for production deployment.
+This document outlines the comprehensive security measures implemented in the Rand Training College Management System and provides configuration guidelines for production deployment.
 
 ## **🛡️ Security Architecture**
 
@@ -253,7 +253,7 @@ chmod 755 -R public/
 
 ```bash
 # Example: Monitor failed logins
-tail -f /var/log/rk-institute/audit.log | grep "LOGIN_FAILED" | \
+tail -f /var/log/rand-training-college/audit.log | grep "LOGIN_FAILED" | \
 while read line; do
   echo "Security Alert: $line" | mail -s "Security Alert" admin@company.com
 done
@@ -387,4 +387,4 @@ INCIDENT_RESPONSE_TEAM="incident@company.com"
 
 ---
 
-**🎯 This security guide ensures enterprise-grade protection for the RK Institute Management System in production environments.**
+**🎯 This security guide ensures enterprise-grade protection for the Rand Training College Management System in production environments.**

@@ -18,21 +18,21 @@ export default function StatCard({
   onClick
 }: StatCardProps) {
   const colorClasses = {
-    blue: 'bg-blue-100 text-blue-600',
-    green: 'bg-green-100 text-green-600',
-    purple: 'bg-purple-100 text-purple-600',
+    blue: 'bg-orange-100 text-orange-600',
+    green: 'bg-orange-100 text-orange-600',
+    purple: 'bg-orange-100 text-orange-700',
     red: 'bg-red-100 text-red-600',
     yellow: 'bg-yellow-100 text-yellow-600',
-    indigo: 'bg-indigo-100 text-indigo-600'
+    indigo: 'bg-orange-100 text-orange-600'
   };
 
   const textColorClasses = {
-    blue: 'text-blue-600',
-    green: 'text-green-600',
-    purple: 'text-purple-600',
+    blue: 'text-orange-600',
+    green: 'text-orange-600',
+    purple: 'text-orange-700',
     red: 'text-red-600',
     yellow: 'text-yellow-600',
-    indigo: 'text-indigo-600'
+    indigo: 'text-orange-600'
   };
 
   return (

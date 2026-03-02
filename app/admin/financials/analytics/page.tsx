@@ -121,9 +121,9 @@ export default function FinancialAnalyticsPage() {
                 <p className='text-sm font-medium text-gray-600'>
                   Revenue Growth
                 </p>
-                <p className='text-2xl font-bold text-green-600'>+15.3%</p>
+                <p className='text-2xl font-bold text-orange-600'>+15.3%</p>
               </div>
-              <div className='text-green-500 text-2xl'>📈</div>
+              <div className='text-orange-500 text-2xl'>📈</div>
             </div>
             <p className='text-xs text-gray-500 mt-2'>vs previous period</p>
           </div>
@@ -134,9 +134,9 @@ export default function FinancialAnalyticsPage() {
                 <p className='text-sm font-medium text-gray-600'>
                   Collection Rate
                 </p>
-                <p className='text-2xl font-bold text-blue-600'>87.5%</p>
+                <p className='text-2xl font-bold text-orange-600'>87.5%</p>
               </div>
-              <div className='text-blue-500 text-2xl'>🎯</div>
+              <div className='text-orange-500 text-2xl'>🎯</div>
             </div>
             <p className='text-xs text-gray-500 mt-2'>payment efficiency</p>
           </div>
@@ -147,9 +147,9 @@ export default function FinancialAnalyticsPage() {
                 <p className='text-sm font-medium text-gray-600'>
                   Avg Payment Time
                 </p>
-                <p className='text-2xl font-bold text-purple-600'>12 days</p>
+                <p className='text-2xl font-bold text-orange-700'>12 days</p>
               </div>
-              <div className='text-purple-500 text-2xl'>⏱️</div>
+              <div className='text-orange-500 text-2xl'>⏱️</div>
             </div>
             <p className='text-xs text-gray-500 mt-2'>from due date</p>
           </div>
@@ -211,7 +211,7 @@ export default function FinancialAnalyticsPage() {
                     </p>
                   </div>
                   <div className='text-right'>
-                    <div className='text-lg font-bold text-green-600'>
+                    <div className='text-lg font-bold text-orange-600'>
                       ₹{family.amount.toLocaleString()}
                     </div>
                     <div className='text-xs text-gray-500'>total paid</div>
@@ -248,7 +248,7 @@ export default function FinancialAnalyticsPage() {
                   </div>
                   <div className='w-full bg-gray-200 rounded-full h-2'>
                     <div
-                      className='bg-blue-600 h-2 rounded-full'
+                      className='bg-orange-600 h-2 rounded-full'
                       style={{ width: `${method.percentage}%` }}
                     ></div>
                   </div>
@@ -313,7 +313,7 @@ export default function FinancialAnalyticsPage() {
                   />
                 </svg>
                 <div className='absolute inset-0 flex items-center justify-center'>
-                  <span className='text-xl font-bold text-green-600'>87%</span>
+                  <span className='text-xl font-bold text-orange-600'>87%</span>
                 </div>
               </div>
               <div className='text-sm font-medium text-gray-900'>
@@ -343,7 +343,7 @@ export default function FinancialAnalyticsPage() {
                   />
                 </svg>
                 <div className='absolute inset-0 flex items-center justify-center'>
-                  <span className='text-xl font-bold text-blue-600'>75%</span>
+                  <span className='text-xl font-bold text-orange-600'>75%</span>
                 </div>
               </div>
               <div className='text-sm font-medium text-gray-900'>
@@ -403,7 +403,7 @@ export default function FinancialAnalyticsPage() {
                   />
                 </svg>
                 <div className='absolute inset-0 flex items-center justify-center'>
-                  <span className='text-xl font-bold text-green-600'>92%</span>
+                  <span className='text-xl font-bold text-orange-600'>92%</span>
                 </div>
               </div>
               <div className='text-sm font-medium text-gray-900'>
@@ -420,13 +420,13 @@ export default function FinancialAnalyticsPage() {
             Financial Recommendations
           </h2>
           <div className='space-y-4'>
-            <div className='flex items-start p-4 bg-green-50 rounded-xl border border-green-200'>
-              <div className='text-green-500 text-xl mr-3'>✅</div>
+            <div className='flex items-start p-4 bg-orange-50 rounded-xl border border-orange-200'>
+              <div className='text-orange-500 text-xl mr-3'>✅</div>
               <div>
-                <h3 className='font-semibold text-green-800'>
+                <h3 className='font-semibold text-orange-800'>
                   Excellent Collection Rate
                 </h3>
-                <p className='text-sm text-green-700'>
+                <p className='text-sm text-orange-700'>
                   Your 87% collection rate is above industry average. Continue
                   current practices.
                 </p>
@@ -444,13 +444,13 @@ export default function FinancialAnalyticsPage() {
                 </p>
               </div>
             </div>
-            <div className='flex items-start p-4 bg-blue-50 rounded-xl border border-blue-200'>
-              <div className='text-blue-500 text-xl mr-3'>💡</div>
+            <div className='flex items-start p-4 bg-orange-50 rounded-xl border border-orange-200'>
+              <div className='text-orange-500 text-xl mr-3'>💡</div>
               <div>
-                <h3 className='font-semibold text-blue-800'>
+                <h3 className='font-semibold text-orange-800'>
                   Promote Digital Payments
                 </h3>
-                <p className='text-sm text-blue-700'>
+                <p className='text-sm text-orange-700'>
                   Bank transfers show highest success rate. Consider
                   incentivizing digital payments.
                 </p>

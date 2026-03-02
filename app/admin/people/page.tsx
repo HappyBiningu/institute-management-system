@@ -82,7 +82,7 @@ export default function PeopleHubPage() {
       description: 'Enroll a new student in the institute',
       icon: '👨‍🎓',
       href: '/admin/students?action=add',
-      color: 'from-blue-500 to-blue-600'
+      color: 'from-orange-500 to-orange-600'
     },
     {
       id: 'add-family',
@@ -90,7 +90,7 @@ export default function PeopleHubPage() {
       description: 'Register a new family in the system',
       icon: '👨‍👩‍👧‍👦',
       href: '/admin/families?action=add',
-      color: 'from-green-500 to-green-600'
+      color: 'from-orange-500 to-orange-600'
     },
     {
       id: 'add-user',
@@ -98,7 +98,7 @@ export default function PeopleHubPage() {
       description: 'Create a new system user account',
       icon: '👤',
       href: '/admin/users?action=add',
-      color: 'from-purple-500 to-purple-600'
+      color: 'from-orange-500 to-orange-700'
     },
     {
       id: 'bulk-import',
@@ -118,7 +118,7 @@ export default function PeopleHubPage() {
         'Manage student profiles, enrollment, and academic information',
       icon: '👨‍🎓',
       href: '/admin/students',
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-orange-500 to-orange-600',
       stats: stats
         ? [
             { label: 'Total Students', value: stats.totalStudents },
@@ -134,7 +134,7 @@ export default function PeopleHubPage() {
         'Manage family profiles, relationships, and contact information',
       icon: '👨‍👩‍👧‍👦',
       href: '/admin/families',
-      color: 'from-green-500 to-green-600',
+      color: 'from-orange-500 to-orange-600',
       stats: stats
         ? [
             { label: 'Total Families', value: stats.totalFamilies },
@@ -153,7 +153,7 @@ export default function PeopleHubPage() {
       description: 'Manage system users, roles, and access permissions',
       icon: '👤',
       href: '/admin/users',
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-orange-500 to-orange-700',
       stats: stats
         ? [
             { label: 'Total Users', value: stats.totalUsers },
@@ -199,7 +199,7 @@ export default function PeopleHubPage() {
             </Link>
             <Link
               href='/admin/people/reports'
-              className='bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl'
+              className='bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl'
             >
               📊 People Reports
             </Link>
@@ -234,7 +234,7 @@ export default function PeopleHubPage() {
                     {action.icon}
                   </div>
                   <div className='flex-1'>
-                    <h3 className='font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-200'>
+                    <h3 className='font-semibold text-gray-900 group-hover:text-orange-600 transition-colors duration-200'>
                       {action.title}
                     </h3>
                   </div>

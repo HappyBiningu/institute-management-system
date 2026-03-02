@@ -199,7 +199,7 @@ export default function ServicesPage() {
                       <div className='flex space-x-2'>
                         <button
                           onClick={() => handleEdit(service)}
-                          className='text-blue-600 hover:text-blue-900 text-sm'
+                          className='text-orange-600 hover:text-orange-900 text-sm'
                         >
                           Edit
                         </button>

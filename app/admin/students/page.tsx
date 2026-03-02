@@ -226,7 +226,7 @@ export default function StudentsPage() {
                           {student.family.name}
                         </div>
                         {student.family.discountAmount > 0 && (
-                          <div className='text-sm text-green-600'>
+                          <div className='text-sm text-orange-600'>
                             Family discount: ₹{student.family.discountAmount}
                           </div>
                         )}
@@ -257,7 +257,7 @@ export default function StudentsPage() {
                       <div className='flex space-x-3'>
                         <button
                           onClick={() => handleEdit(student)}
-                          className='bg-blue-100 hover:bg-blue-200 text-blue-700 px-3 py-1 rounded-lg text-sm font-medium transition-colors duration-200'
+                          className='bg-orange-100 hover:bg-orange-200 text-orange-700 px-3 py-1 rounded-lg text-sm font-medium transition-colors duration-200'
                         >
                           Edit
                         </button>

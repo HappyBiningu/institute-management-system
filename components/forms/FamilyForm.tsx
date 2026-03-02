@@ -209,9 +209,9 @@ export default function FamilyForm({
         />
       </div>
 
-      <div className='bg-gradient-to-r from-pink-50 to-pink-100 rounded-2xl p-6 border border-pink-200'>
+      <div className='bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-6 border border-orange-200'>
         <h4 className='text-xl font-bold text-gray-900 mb-6 flex items-center'>
-          <span className='w-8 h-8 bg-gradient-to-r from-pink-500 to-pink-600 rounded-lg flex items-center justify-center mr-3'>
+          <span className='w-8 h-8 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mr-3'>
             <svg
               className='w-4 h-4 text-white'
               fill='none'

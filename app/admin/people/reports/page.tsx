@@ -39,7 +39,7 @@ export default function PeopleReportsPage() {
 
           {/* Planned Features */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8'>
-            <div className='p-6 bg-blue-50 rounded-xl'>
+            <div className='p-6 bg-orange-50 rounded-xl'>
               <div className='text-2xl mb-3'>👥</div>
               <h3 className='font-semibold text-gray-900 mb-2'>
                 Student Reports
@@ -49,7 +49,7 @@ export default function PeopleReportsPage() {
               </p>
             </div>
 
-            <div className='p-6 bg-green-50 rounded-xl'>
+            <div className='p-6 bg-orange-50 rounded-xl'>
               <div className='text-2xl mb-3'>🏠</div>
               <h3 className='font-semibold text-gray-900 mb-2'>
                 Family Reports
@@ -59,7 +59,7 @@ export default function PeopleReportsPage() {
               </p>
             </div>
 
-            <div className='p-6 bg-purple-50 rounded-xl'>
+            <div className='p-6 bg-orange-50 rounded-xl'>
               <div className='text-2xl mb-3'>👤</div>
               <h3 className='font-semibold text-gray-900 mb-2'>
                 User Activity

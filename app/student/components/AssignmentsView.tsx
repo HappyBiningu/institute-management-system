@@ -162,9 +162,9 @@ export default function AssignmentsView() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'SUBMITTED':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-orange-100 text-orange-800';
       case 'GRADED':
-        return 'bg-green-100 text-green-800';
+        return 'bg-orange-100 text-orange-800';
       case 'LATE':
         return 'bg-yellow-100 text-yellow-800';
       case 'OVERDUE':
@@ -181,7 +181,7 @@ export default function AssignmentsView() {
       case 'HIGH':
         return 'bg-orange-100 text-orange-800';
       case 'MEDIUM':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-orange-100 text-orange-800';
       case 'LOW':
         return 'bg-gray-100 text-gray-800';
       default:
@@ -268,7 +268,7 @@ export default function AssignmentsView() {
             <select
               value={filterSubject}
               onChange={e => setFilterSubject(e.target.value)}
-              className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+              className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
             >
               <option value='all'>All Subjects</option>
               {uniqueSubjects.map(subject => (
@@ -285,7 +285,7 @@ export default function AssignmentsView() {
             <select
               value={filterStatus}
               onChange={e => setFilterStatus(e.target.value)}
-              className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+              className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
             >
               <option value='all'>All Status</option>
               <option value='pending'>Pending</option>
@@ -300,7 +300,7 @@ export default function AssignmentsView() {
             <select
               value={filterType}
               onChange={e => setFilterType(e.target.value)}
-              className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+              className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
             >
               <option value='all'>All Types</option>
               {uniqueTypes.map(type => (
@@ -381,7 +381,7 @@ export default function AssignmentsView() {
                           setSelectedAssignment(assignment);
                           setShowSubmissionForm(true);
                         }}
-                        className='bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors'
+                        className='bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors'
                       >
                         Submit
                       </button>
@@ -434,7 +434,7 @@ export default function AssignmentsView() {
                   value={submissionContent}
                   onChange={e => setSubmissionContent(e.target.value)}
                   rows={6}
-                  className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+                  className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
                   placeholder='Enter your assignment response...'
                 />
               </div>
@@ -442,7 +442,7 @@ export default function AssignmentsView() {
                 <button
                   onClick={() => handleSubmitAssignment(selectedAssignment.id)}
                   disabled={!submissionContent.trim()}
-                  className='flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors'
+                  className='flex-1 bg-orange-600 text-white py-2 px-4 rounded-lg hover:bg-orange-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors'
                 >
                   Submit Assignment
                 </button>

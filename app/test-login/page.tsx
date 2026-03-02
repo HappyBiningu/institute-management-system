@@ -17,7 +17,7 @@ export default function TestLoginPage() {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          email: 'admin@rkinstitute.com',
+          email: 'admin@randtrainingcollege.com',
           password: 'admin123'
         })
       });
@@ -52,7 +52,7 @@ export default function TestLoginPage() {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          email: 'admin@rkinstitute.com',
+          email: 'admin@randtrainingcollege.com',
           password: 'admin123'
         })
       });
@@ -139,12 +139,12 @@ export default function TestLoginPage() {
           </div>
         )}
 
-        <div className='mt-8 p-6 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl border border-blue-200'>
+        <div className='mt-8 p-6 bg-gradient-to-r from-orange-50 to-orange-100 rounded-xl border border-orange-200'>
           <h3 className='font-bold text-gray-900 mb-3'>Test Credentials:</h3>
           <div className='space-y-1 text-sm'>
             <p>
               <span className='font-semibold'>Email:</span>{' '}
-              admin@rkinstitute.com
+              admin@randtrainingcollege.com
             </p>
             <p>
               <span className='font-semibold'>Password:</span> admin123

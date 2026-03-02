@@ -152,9 +152,9 @@ export default function ServiceForm({
         />
       </div>
 
-      <div className='bg-gradient-to-r from-purple-50 to-purple-100 rounded-2xl p-6 border border-purple-200'>
+      <div className='bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-6 border border-orange-200'>
         <h4 className='text-xl font-bold text-gray-900 mb-6 flex items-center'>
-          <span className='w-8 h-8 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mr-3'>
+          <span className='w-8 h-8 bg-gradient-to-r from-orange-500 to-orange-700 rounded-lg flex items-center justify-center mr-3'>
             <svg
               className='w-4 h-4 text-white'
               fill='none'

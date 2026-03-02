@@ -73,13 +73,13 @@ export default function AcademicLogDetail() {
   const getLogTypeColor = (type: string) => {
     switch (type.toUpperCase()) {
       case 'ACHIEVEMENT':
-        return 'bg-green-100 text-green-800 border-green-200';
+        return 'bg-orange-100 text-orange-800 border-orange-200';
       case 'CONCERN':
         return 'bg-red-100 text-red-800 border-red-200';
       case 'GENERAL':
-        return 'bg-blue-100 text-blue-800 border-blue-200';
+        return 'bg-orange-100 text-orange-800 border-orange-200';
       case 'PROGRESS':
-        return 'bg-purple-100 text-purple-800 border-purple-200';
+        return 'bg-orange-100 text-orange-800 border-orange-200';
       default:
         return 'bg-gray-100 text-gray-800 border-gray-200';
     }
@@ -89,7 +89,7 @@ export default function AcademicLogDetail() {
     return (
       <AdminLayout>
         <div className='flex items-center justify-center h-64'>
-          <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600'></div>
+          <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-orange-600'></div>
         </div>
       </AdminLayout>
     );
@@ -115,7 +115,7 @@ export default function AcademicLogDetail() {
           <p className='text-gray-500 mb-4'>{error}</p>
           <Link
             href='/admin/academic-logs'
-            className='inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700'
+            className='inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700'
           >
             ← Back to Academic Logs
           </Link>
@@ -153,13 +153,13 @@ export default function AcademicLogDetail() {
           <div className='flex space-x-3'>
             <Link
               href={`/admin/academic-logs?student=${log.student.id}`}
-              className='px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700'
+              className='px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700'
             >
               View All Student Logs
             </Link>
             <Link
               href={`/admin/academic-logs?teacher=${log.teacher.id}`}
-              className='px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700'
+              className='px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700'
             >
               View All Teacher Logs
             </Link>
@@ -214,7 +214,7 @@ export default function AcademicLogDetail() {
 
               {log.subject && (
                 <div className='mb-4'>
-                  <span className='inline-flex items-center px-3 py-1 text-sm font-medium bg-blue-50 text-blue-700 rounded-full border border-blue-200'>
+                  <span className='inline-flex items-center px-3 py-1 text-sm font-medium bg-orange-50 text-orange-700 rounded-full border border-orange-200'>
                     Subject: {log.subject}
                   </span>
                 </div>
@@ -264,7 +264,7 @@ export default function AcademicLogDetail() {
                 <div className='pt-2'>
                   <Link
                     href={`/admin/students/${log.student.id}`}
-                    className='text-blue-600 hover:text-blue-800 text-sm font-medium'
+                    className='text-orange-600 hover:text-orange-800 text-sm font-medium'
                   >
                     View Student Profile →
                   </Link>
@@ -293,7 +293,7 @@ export default function AcademicLogDetail() {
                 <div className='pt-2'>
                   <Link
                     href={`/admin/users/${log.teacher.id}`}
-                    className='text-blue-600 hover:text-blue-800 text-sm font-medium'
+                    className='text-orange-600 hover:text-orange-800 text-sm font-medium'
                   >
                     View Teacher Profile →
                   </Link>
@@ -309,19 +309,19 @@ export default function AcademicLogDetail() {
               <div className='space-y-3'>
                 <Link
                   href={`/admin/academic-logs?student=${log.student.id}`}
-                  className='block w-full text-center px-4 py-2 bg-blue-50 text-blue-700 rounded-md hover:bg-blue-100 transition-colors'
+                  className='block w-full text-center px-4 py-2 bg-orange-50 text-orange-700 rounded-md hover:bg-orange-100 transition-colors'
                 >
                   All Logs for {log.student.name}
                 </Link>
                 <Link
                   href={`/admin/academic-logs?teacher=${log.teacher.id}`}
-                  className='block w-full text-center px-4 py-2 bg-green-50 text-green-700 rounded-md hover:bg-green-100 transition-colors'
+                  className='block w-full text-center px-4 py-2 bg-orange-50 text-orange-700 rounded-md hover:bg-orange-100 transition-colors'
                 >
                   All Logs by {log.teacher.name}
                 </Link>
                 <Link
                   href={`/admin/academic-logs?logType=${log.logType}`}
-                  className='block w-full text-center px-4 py-2 bg-purple-50 text-purple-700 rounded-md hover:bg-purple-100 transition-colors'
+                  className='block w-full text-center px-4 py-2 bg-orange-50 text-orange-700 rounded-md hover:bg-orange-100 transition-colors'
                 >
                   All {log.logType} Logs
                 </Link>

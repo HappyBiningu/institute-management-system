@@ -18,10 +18,10 @@ export default function LoadingSpinner({
   };
 
   const colorClasses = {
-    blue: 'border-blue-600',
-    green: 'border-green-600',
-    purple: 'border-purple-600',
-    teal: 'border-teal-600'
+    blue: 'border-orange-600',
+    green: 'border-orange-600',
+    purple: 'border-orange-700',
+    teal: 'border-orange-600'
   };
 
   return (

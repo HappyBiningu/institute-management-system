@@ -146,8 +146,9 @@ export default function ParentDashboard() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex justify-between items-center h-16'>
             <div className='flex items-center'>
-              <h1 className='text-2xl font-bold text-gray-900'>RK Institute</h1>
-              <span className='ml-4 px-3 py-1 bg-gradient-to-r from-green-100 to-blue-100 text-green-800 text-sm font-medium rounded-full'>
+              <img src='/logo.webp' alt='Rand Training College' className='h-10 w-auto mr-3' />
+              <h1 className='text-2xl font-bold text-gray-900'>Rand Training College</h1>
+              <span className='ml-4 px-3 py-1 bg-gradient-to-r from-orange-100 to-orange-200 text-orange-800 text-sm font-medium rounded-full'>
                 👨‍👩‍👧‍👦 Parent Portal
               </span>
             </div>
@@ -180,7 +181,7 @@ export default function ParentDashboard() {
               <select
                 value={selectedChild}
                 onChange={e => setSelectedChild(e.target.value)}
-                className='border border-gray-300 rounded-lg px-3 py-1 text-sm focus:ring-2 focus:ring-green-500 focus:border-transparent'
+                className='border border-gray-300 rounded-lg px-3 py-1 text-sm focus:ring-2 focus:ring-orange-500 focus:border-transparent'
               >
                 <option value='all'>All Children</option>
                 {familyProfile.children.map(child => (
@@ -213,7 +214,7 @@ export default function ParentDashboard() {
         {activeTab === 'overview' && (
           <div className='space-y-8'>
             {/* Welcome Section */}
-            <div className='bg-gradient-to-r from-green-500 via-blue-600 to-purple-600 rounded-xl shadow-lg p-8 text-white'>
+            <div className='bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 rounded-xl shadow-lg p-8 text-white'>
               <h2 className='text-3xl font-bold mb-4'>
                 Welcome, {familyProfile?.name}!
               </h2>
@@ -299,7 +300,7 @@ export default function ParentDashboard() {
                 className='bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-200 text-left group'
               >
                 <div className='flex items-center'>
-                  <div className='p-3 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition-colors'>
+                  <div className='p-3 bg-orange-100 rounded-lg group-hover:bg-orange-200 transition-colors'>
                     <span className='text-2xl'>👨‍👩‍👧‍👦</span>
                   </div>
                   <div className='ml-4'>
@@ -318,7 +319,7 @@ export default function ParentDashboard() {
                 className='bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-200 text-left group'
               >
                 <div className='flex items-center'>
-                  <div className='p-3 bg-green-100 rounded-lg group-hover:bg-green-200 transition-colors'>
+                  <div className='p-3 bg-orange-100 rounded-lg group-hover:bg-orange-200 transition-colors'>
                     <span className='text-2xl'>💰</span>
                   </div>
                   <div className='ml-4'>
@@ -337,7 +338,7 @@ export default function ParentDashboard() {
                 className='bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-200 text-left group'
               >
                 <div className='flex items-center'>
-                  <div className='p-3 bg-purple-100 rounded-lg group-hover:bg-purple-200 transition-colors'>
+                  <div className='p-3 bg-orange-100 rounded-lg group-hover:bg-orange-200 transition-colors'>
                     <span className='text-2xl'>📚</span>
                   </div>
                   <div className='ml-4'>

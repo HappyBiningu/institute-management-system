@@ -1,5 +1,5 @@
 # =============================================================================
-# RK Institute Management System - Release Management
+# Rand Training College Management System - Release Management
 # =============================================================================
 # This workflow handles automated versioning, release notes, and changelog
 # generation based on conventional commits.

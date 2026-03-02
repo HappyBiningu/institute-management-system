@@ -225,9 +225,9 @@ export default function AssignmentsManager() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'SUBMITTED':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-orange-100 text-orange-800';
       case 'GRADED':
-        return 'bg-green-100 text-green-800';
+        return 'bg-orange-100 text-orange-800';
       case 'LATE':
         return 'bg-yellow-100 text-yellow-800';
       default:
@@ -242,7 +242,7 @@ export default function AssignmentsManager() {
       case 'HIGH':
         return 'bg-orange-100 text-orange-800';
       case 'MEDIUM':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-orange-100 text-orange-800';
       case 'LOW':
         return 'bg-gray-100 text-gray-800';
       default:
@@ -322,7 +322,7 @@ export default function AssignmentsManager() {
         </h2>
         <button
           onClick={() => setShowCreateForm(true)}
-          className='bg-teal-600 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition-colors'
+          className='bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors'
         >
           ➕ Create Assignment
         </button>
@@ -404,7 +404,7 @@ export default function AssignmentsManager() {
                               {submission.status}
                             </span>
                             {submission.grade && (
-                              <span className='text-sm text-green-600 font-medium'>
+                              <span className='text-sm text-orange-600 font-medium'>
                                 Grade: {submission.grade}
                               </span>
                             )}
@@ -420,7 +420,7 @@ export default function AssignmentsManager() {
                               setSelectedSubmission(submission);
                               setShowGradingModal(true);
                             }}
-                            className='bg-teal-600 text-white px-3 py-1 rounded text-sm hover:bg-teal-700 transition-colors'
+                            className='bg-orange-600 text-white px-3 py-1 rounded text-sm hover:bg-orange-700 transition-colors'
                           >
                             Grade
                           </button>
@@ -454,7 +454,7 @@ export default function AssignmentsManager() {
                     onChange={e =>
                       setFormData({ ...formData, title: e.target.value })
                     }
-                    className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent'
+                    className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
                     required
                   />
                 </div>
@@ -468,7 +468,7 @@ export default function AssignmentsManager() {
                     onChange={e =>
                       setFormData({ ...formData, subject: e.target.value })
                     }
-                    className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent'
+                    className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
                     required
                   />
                 </div>
@@ -484,7 +484,7 @@ export default function AssignmentsManager() {
                     setFormData({ ...formData, description: e.target.value })
                   }
                   rows={4}
-                  className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent'
+                  className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
                   required
                 />
               </div>
@@ -502,7 +502,7 @@ export default function AssignmentsManager() {
                         assignmentType: e.target.value
                       })
                     }
-                    className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent'
+                    className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
                   >
                     <option value='HOMEWORK'>Homework</option>
                     <option value='PROJECT'>Project</option>
@@ -520,7 +520,7 @@ export default function AssignmentsManager() {
                     onChange={e =>
                       setFormData({ ...formData, priority: e.target.value })
                     }
-                    className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent'
+                    className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
                   >
                     <option value='LOW'>Low</option>
                     <option value='MEDIUM'>Medium</option>
@@ -538,7 +538,7 @@ export default function AssignmentsManager() {
                     onChange={e =>
                       setFormData({ ...formData, dueDate: e.target.value })
                     }
-                    className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent'
+                    className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
                   />
                 </div>
               </div>
@@ -557,7 +557,7 @@ export default function AssignmentsManager() {
                         studentId: ''
                       })
                     }
-                    className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent'
+                    className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
                   >
                     <option value=''>Select Grade</option>
                     {uniqueGrades.map(grade => (
@@ -580,7 +580,7 @@ export default function AssignmentsManager() {
                         grade: ''
                       })
                     }
-                    className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent'
+                    className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
                   >
                     <option value=''>Select Student</option>
                     {students.map(student => (
@@ -595,7 +595,7 @@ export default function AssignmentsManager() {
               <div className='flex space-x-3 pt-4'>
                 <button
                   type='submit'
-                  className='flex-1 bg-teal-600 text-white py-2 px-4 rounded-lg hover:bg-teal-700 transition-colors'
+                  className='flex-1 bg-orange-600 text-white py-2 px-4 rounded-lg hover:bg-orange-700 transition-colors'
                 >
                   Create Assignment
                 </button>
@@ -630,7 +630,7 @@ export default function AssignmentsManager() {
                   onChange={e =>
                     setGradingData({ ...gradingData, grade: e.target.value })
                   }
-                  className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent'
+                  className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
                   placeholder='e.g., A+, 95%, Excellent'
                   required
                 />
@@ -645,14 +645,14 @@ export default function AssignmentsManager() {
                     setGradingData({ ...gradingData, feedback: e.target.value })
                   }
                   rows={4}
-                  className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:border-transparent'
+                  className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
                   placeholder='Provide feedback to the student...'
                 />
               </div>
               <div className='flex space-x-3'>
                 <button
                   type='submit'
-                  className='flex-1 bg-teal-600 text-white py-2 px-4 rounded-lg hover:bg-teal-700 transition-colors'
+                  className='flex-1 bg-orange-600 text-white py-2 px-4 rounded-lg hover:bg-orange-700 transition-colors'
                 >
                   Submit Grade
                 </button>

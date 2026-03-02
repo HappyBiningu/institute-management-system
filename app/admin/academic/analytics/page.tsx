@@ -80,9 +80,9 @@ export default function AcademicAnalyticsPage() {
                 <p className='text-sm font-medium text-gray-600'>
                   Enrollment Growth
                 </p>
-                <p className='text-2xl font-bold text-green-600'>+12.5%</p>
+                <p className='text-2xl font-bold text-orange-600'>+12.5%</p>
               </div>
-              <div className='text-green-500 text-2xl'>📈</div>
+              <div className='text-orange-500 text-2xl'>📈</div>
             </div>
             <p className='text-xs text-gray-500 mt-2'>vs previous period</p>
           </div>
@@ -93,9 +93,9 @@ export default function AcademicAnalyticsPage() {
                 <p className='text-sm font-medium text-gray-600'>
                   Average Progress
                 </p>
-                <p className='text-2xl font-bold text-blue-600'>78.3%</p>
+                <p className='text-2xl font-bold text-orange-600'>78.3%</p>
               </div>
-              <div className='text-blue-500 text-2xl'>🎯</div>
+              <div className='text-orange-500 text-2xl'>🎯</div>
             </div>
             <p className='text-xs text-gray-500 mt-2'>across all courses</p>
           </div>
@@ -106,9 +106,9 @@ export default function AcademicAnalyticsPage() {
                 <p className='text-sm font-medium text-gray-600'>
                   Active Teachers
                 </p>
-                <p className='text-2xl font-bold text-purple-600'>8</p>
+                <p className='text-2xl font-bold text-orange-700'>8</p>
               </div>
-              <div className='text-purple-500 text-2xl'>👨‍🏫</div>
+              <div className='text-orange-500 text-2xl'>👨‍🏫</div>
             </div>
             <p className='text-xs text-gray-500 mt-2'>managing courses</p>
           </div>
@@ -133,14 +133,14 @@ export default function AcademicAnalyticsPage() {
             Student Progress Distribution
           </h2>
           <div className='grid grid-cols-1 md:grid-cols-4 gap-6'>
-            <div className='text-center p-4 bg-green-50 rounded-xl'>
-              <div className='text-3xl font-bold text-green-600'>32%</div>
-              <div className='text-sm text-green-800'>Excellent (90-100%)</div>
+            <div className='text-center p-4 bg-orange-50 rounded-xl'>
+              <div className='text-3xl font-bold text-orange-600'>32%</div>
+              <div className='text-sm text-orange-800'>Excellent (90-100%)</div>
               <div className='text-xs text-gray-500 mt-1'>18 students</div>
             </div>
-            <div className='text-center p-4 bg-blue-50 rounded-xl'>
-              <div className='text-3xl font-bold text-blue-600'>28%</div>
-              <div className='text-sm text-blue-800'>Good (80-89%)</div>
+            <div className='text-center p-4 bg-orange-50 rounded-xl'>
+              <div className='text-3xl font-bold text-orange-600'>28%</div>
+              <div className='text-sm text-orange-800'>Good (80-89%)</div>
               <div className='text-xs text-gray-500 mt-1'>16 students</div>
             </div>
             <div className='text-center p-4 bg-yellow-50 rounded-xl'>
@@ -164,23 +164,23 @@ export default function AcademicAnalyticsPage() {
             Academic Performance Summary
           </h2>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-            <div className='text-center p-4 bg-green-50 rounded-xl'>
-              <div className='text-3xl font-bold text-green-600'>85%</div>
-              <div className='text-sm text-green-800'>Students Excelling</div>
+            <div className='text-center p-4 bg-orange-50 rounded-xl'>
+              <div className='text-3xl font-bold text-orange-600'>85%</div>
+              <div className='text-sm text-orange-800'>Students Excelling</div>
               <div className='text-xs text-gray-500 mt-1'>
                 Above 80% progress
               </div>
             </div>
-            <div className='text-center p-4 bg-blue-50 rounded-xl'>
-              <div className='text-3xl font-bold text-blue-600'>12</div>
-              <div className='text-sm text-blue-800'>Active Courses</div>
+            <div className='text-center p-4 bg-orange-50 rounded-xl'>
+              <div className='text-3xl font-bold text-orange-600'>12</div>
+              <div className='text-sm text-orange-800'>Active Courses</div>
               <div className='text-xs text-gray-500 mt-1'>
                 Currently running
               </div>
             </div>
-            <div className='text-center p-4 bg-purple-50 rounded-xl'>
-              <div className='text-3xl font-bold text-purple-600'>95%</div>
-              <div className='text-sm text-purple-800'>Attendance Rate</div>
+            <div className='text-center p-4 bg-orange-50 rounded-xl'>
+              <div className='text-3xl font-bold text-orange-700'>95%</div>
+              <div className='text-sm text-orange-800'>Attendance Rate</div>
               <div className='text-xs text-gray-500 mt-1'>Overall average</div>
             </div>
           </div>

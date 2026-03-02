@@ -153,7 +153,7 @@ export default function ChildrenView({ selectedChild }: ChildrenViewProps) {
             onClick={() => setSelectedChildDetail(child)}
           >
             <div className='flex items-center space-x-4 mb-4'>
-              <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg'>
+              <div className='w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-700 rounded-full flex items-center justify-center text-white font-bold text-lg'>
                 {child.name.charAt(0)}
               </div>
               <div className='flex-1'>
@@ -161,7 +161,7 @@ export default function ChildrenView({ selectedChild }: ChildrenViewProps) {
                 <p className='text-sm text-gray-600'>{child.studentId}</p>
               </div>
               <div
-                className={`w-3 h-3 rounded-full ${child.isActive ? 'bg-green-400' : 'bg-gray-400'}`}
+                className={`w-3 h-3 rounded-full ${child.isActive ? 'bg-orange-400' : 'bg-gray-400'}`}
               ></div>
             </div>
 
@@ -180,7 +180,7 @@ export default function ChildrenView({ selectedChild }: ChildrenViewProps) {
               </div>
               <div className='flex justify-between'>
                 <span className='text-gray-600'>Achievements:</span>
-                <span className='font-medium text-green-600'>
+                <span className='font-medium text-orange-600'>
                   {child.recentAchievements.length}
                 </span>
               </div>
@@ -194,7 +194,7 @@ export default function ChildrenView({ selectedChild }: ChildrenViewProps) {
                 </p>
                 <div className='flex items-center space-x-2'>
                   <span className='text-lg'>🏆</span>
-                  <span className='text-xs font-medium text-green-600'>
+                  <span className='text-xs font-medium text-orange-600'>
                     {child.recentAchievements[0].subject}
                   </span>
                   <span className='text-xs text-gray-500'>
@@ -271,7 +271,7 @@ export default function ChildrenView({ selectedChild }: ChildrenViewProps) {
                       <span
                         className={
                           selectedChildDetail.isActive
-                            ? 'text-green-600'
+                            ? 'text-orange-600'
                             : 'text-red-600'
                         }
                       >
@@ -299,7 +299,7 @@ export default function ChildrenView({ selectedChild }: ChildrenViewProps) {
                             {course.teacher}
                           </div>
                         </div>
-                        <span className='text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded'>
+                        <span className='text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded'>
                           {course.grade}
                         </span>
                       </div>
@@ -335,7 +335,7 @@ export default function ChildrenView({ selectedChild }: ChildrenViewProps) {
                   {selectedChildDetail.recentAchievements.length > 0 ? (
                     selectedChildDetail.recentAchievements.map(
                       (achievement, index) => (
-                        <div key={index} className='bg-green-50 rounded-lg p-3'>
+                        <div key={index} className='bg-orange-50 rounded-lg p-3'>
                           <div className='flex items-center space-x-2 mb-2'>
                             <span className='text-lg'>🏆</span>
                             <span className='font-medium text-gray-900'>

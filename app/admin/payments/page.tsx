@@ -280,7 +280,7 @@ export default function PaymentsPage() {
                         </div>
                       </td>
                       <td className='table-cell'>
-                        <div className='font-bold text-green-600'>
+                        <div className='font-bold text-orange-600'>
                           ₹{allocation.netAmount.toFixed(2)}
                         </div>
                         {allocation.discountAmount > 0 && (
@@ -302,7 +302,7 @@ export default function PaymentsPage() {
                           onClick={() =>
                             handleRecordPayment(allocation.student.id)
                           }
-                          className='bg-green-100 hover:bg-green-200 text-green-700 px-3 py-1 rounded-lg text-sm font-medium transition-colors duration-200'
+                          className='bg-orange-100 hover:bg-orange-200 text-orange-700 px-3 py-1 rounded-lg text-sm font-medium transition-colors duration-200'
                         >
                           Record Payment
                         </button>
@@ -361,12 +361,12 @@ export default function PaymentsPage() {
                       </div>
                     </td>
                     <td className='table-cell'>
-                      <div className='font-bold text-green-600'>
+                      <div className='font-bold text-orange-600'>
                         ₹{payment.amount.toFixed(2)}
                       </div>
                     </td>
                     <td className='table-cell'>
-                      <span className='inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800'>
+                      <span className='inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800'>
                         {payment.paymentMethod}
                       </span>
                     </td>
@@ -384,7 +384,7 @@ export default function PaymentsPage() {
                       <span
                         className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                           payment.status === 'COMPLETED'
-                            ? 'bg-green-100 text-green-800'
+                            ? 'bg-orange-100 text-orange-800'
                             : 'bg-yellow-100 text-yellow-800'
                         }`}
                       >

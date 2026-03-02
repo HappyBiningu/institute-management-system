@@ -118,11 +118,11 @@ export default function FamilyAcademicView({
   const getLogTypeColor = (logType: string) => {
     switch (logType) {
       case 'ACHIEVEMENT':
-        return 'bg-green-100 text-green-800';
+        return 'bg-orange-100 text-orange-800';
       case 'CONCERN':
         return 'bg-red-100 text-red-800';
       default:
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-orange-100 text-orange-800';
     }
   };
 
@@ -191,13 +191,13 @@ export default function FamilyAcademicView({
               </div>
               <div className='flex justify-between'>
                 <span className='text-gray-600'>Achievements:</span>
-                <span className='font-medium text-green-600'>
+                <span className='font-medium text-orange-600'>
                   {emmaLogs.filter(log => log.logType === 'ACHIEVEMENT').length}
                 </span>
               </div>
               <div className='flex justify-between'>
                 <span className='text-gray-600'>Progress Reports:</span>
-                <span className='font-medium text-blue-600'>
+                <span className='font-medium text-orange-600'>
                   {emmaLogs.filter(log => log.logType === 'PROGRESS').length}
                 </span>
               </div>
@@ -223,13 +223,13 @@ export default function FamilyAcademicView({
               </div>
               <div className='flex justify-between'>
                 <span className='text-gray-600'>Achievements:</span>
-                <span className='font-medium text-green-600'>
+                <span className='font-medium text-orange-600'>
                   {liamLogs.filter(log => log.logType === 'ACHIEVEMENT').length}
                 </span>
               </div>
               <div className='flex justify-between'>
                 <span className='text-gray-600'>Progress Reports:</span>
-                <span className='font-medium text-blue-600'>
+                <span className='font-medium text-orange-600'>
                   {liamLogs.filter(log => log.logType === 'PROGRESS').length}
                 </span>
               </div>
@@ -256,7 +256,7 @@ export default function FamilyAcademicView({
             <select
               value={filterType}
               onChange={e => setFilterType(e.target.value)}
-              className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent'
+              className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
             >
               <option value='all'>All Types</option>
               <option value='ACHIEVEMENT'>Achievements</option>
@@ -271,7 +271,7 @@ export default function FamilyAcademicView({
             <select
               value={filterSubject}
               onChange={e => setFilterSubject(e.target.value)}
-              className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent'
+              className='w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-orange-500 focus:border-transparent'
             >
               <option value='all'>All Subjects</option>
               {uniqueSubjects.map(subject => (
@@ -335,10 +335,10 @@ export default function FamilyAcademicView({
               </div>
 
               {log.logType === 'ACHIEVEMENT' && (
-                <div className='mt-4 p-3 bg-green-50 border border-green-200 rounded-lg'>
+                <div className='mt-4 p-3 bg-orange-50 border border-orange-200 rounded-lg'>
                   <div className='flex items-center space-x-2'>
-                    <span className='text-green-600'>🎉</span>
-                    <span className='text-sm font-medium text-green-800'>
+                    <span className='text-orange-600'>🎉</span>
+                    <span className='text-sm font-medium text-orange-800'>
                       Congratulations to {log.studentName} on this achievement!
                     </span>
                   </div>
@@ -350,7 +350,7 @@ export default function FamilyAcademicView({
       </div>
 
       {/* Family Academic Summary */}
-      <div className='bg-gradient-to-r from-green-50 to-blue-50 rounded-xl border border-green-200 p-6'>
+      <div className='bg-gradient-to-r from-orange-50 to-orange-50 rounded-xl border border-orange-200 p-6'>
         <h3 className='text-lg font-semibold text-gray-900 mb-4'>
           🎯 Family Academic Summary
         </h3>
@@ -359,19 +359,19 @@ export default function FamilyAcademicView({
             <h4 className='font-medium text-gray-900 mb-3'>Family Strengths</h4>
             <ul className='space-y-2 text-sm text-gray-700'>
               <li className='flex items-center space-x-2'>
-                <span className='text-green-500'>✓</span>
+                <span className='text-orange-500'>✓</span>
                 <span>Exceptional performance in Mathematics (Emma)</span>
               </li>
               <li className='flex items-center space-x-2'>
-                <span className='text-green-500'>✓</span>
+                <span className='text-orange-500'>✓</span>
                 <span>Strong research and analytical skills (Emma)</span>
               </li>
               <li className='flex items-center space-x-2'>
-                <span className='text-green-500'>✓</span>
+                <span className='text-orange-500'>✓</span>
                 <span>Creative excellence in Arts (Liam)</span>
               </li>
               <li className='flex items-center space-x-2'>
-                <span className='text-green-500'>✓</span>
+                <span className='text-orange-500'>✓</span>
                 <span>Consistent improvement across subjects</span>
               </li>
             </ul>
@@ -380,15 +380,15 @@ export default function FamilyAcademicView({
             <h4 className='font-medium text-gray-900 mb-3'>Areas for Growth</h4>
             <ul className='space-y-2 text-sm text-gray-700'>
               <li className='flex items-center space-x-2'>
-                <span className='text-blue-500'>→</span>
+                <span className='text-orange-500'>→</span>
                 <span>Continue developing writing skills (Liam)</span>
               </li>
               <li className='flex items-center space-x-2'>
-                <span className='text-blue-500'>→</span>
+                <span className='text-orange-500'>→</span>
                 <span>Explore advanced physics concepts (Emma)</span>
               </li>
               <li className='flex items-center space-x-2'>
-                <span className='text-blue-500'>→</span>
+                <span className='text-orange-500'>→</span>
                 <span>Encourage more collaborative learning</span>
               </li>
             </ul>

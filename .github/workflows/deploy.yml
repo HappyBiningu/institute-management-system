@@ -1,5 +1,5 @@
 # =============================================================================
-# RK Institute Management System - Deployment Pipeline
+# Rand Training College Management System - Deployment Pipeline
 # =============================================================================
 # This workflow handles automated deployments to staging and production
 # environments based on branch pushes and successful CI checks.
@@ -43,10 +43,10 @@ jobs:
         run: |
           if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
             echo "environment=production" >> $GITHUB_OUTPUT
-            echo "deploy-url=https://rk-institute-management-system.vercel.app" >> $GITHUB_OUTPUT
+            echo "deploy-url=https://rand-training-college-management-system.vercel.app" >> $GITHUB_OUTPUT
           elif [[ "${{ github.ref }}" == "refs/heads/develop" ]]; then
             echo "environment=staging" >> $GITHUB_OUTPUT
-            echo "deploy-url=https://rk-institute-management-system-staging.vercel.app" >> $GITHUB_OUTPUT
+            echo "deploy-url=https://rand-training-college-management-system-staging.vercel.app" >> $GITHUB_OUTPUT
           fi
 
       - name: 📊 Display deployment info

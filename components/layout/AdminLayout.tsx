@@ -79,7 +79,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
           />
         </svg>
       ),
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-orange-500 to-orange-600',
       description: 'Institute overview and key metrics'
     },
     {
@@ -100,7 +100,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
           />
         </svg>
       ),
-      color: 'from-pink-500 to-pink-600',
+      color: 'from-orange-500 to-orange-600',
       description: 'Students, families and users'
     },
     {
@@ -121,7 +121,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
           />
         </svg>
       ),
-      color: 'from-green-500 to-green-600',
+      color: 'from-orange-500 to-orange-600',
       description: 'Courses, services and student progress'
     },
     {
@@ -142,7 +142,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
           />
         </svg>
       ),
-      color: 'from-emerald-500 to-emerald-600',
+      color: 'from-orange-500 to-orange-600',
       description: 'Fees, payments and billing'
     },
     {
@@ -163,7 +163,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
           />
         </svg>
       ),
-      color: 'from-cyan-500 to-cyan-600',
+      color: 'from-orange-500 to-orange-600',
       description: 'Analytics and automated reports'
     },
     {
@@ -190,7 +190,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
           />
         </svg>
       ),
-      color: 'from-violet-500 to-violet-600',
+      color: 'from-orange-500 to-orange-600',
       description: 'System automation and settings'
     }
   ];
@@ -218,11 +218,9 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
           </div>
           <div className='flex-1 h-0 pt-5 pb-4 overflow-y-auto'>
             <div className='flex-shrink-0 flex items-center px-6 mb-8'>
-              <div className='h-10 w-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center mr-3'>
-                <span className='text-lg font-bold text-white'>RK</span>
-              </div>
+              <img src='/logo.webp' alt='Rand Training College' className='h-10 w-auto mr-3' />
               <h1 className='text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent'>
-                RK Institute
+                Rand Training College
               </h1>
             </div>
             <nav className='px-3 space-y-2'>
@@ -250,12 +248,10 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
         <div className='flex-1 flex flex-col min-h-0 bg-white/80 backdrop-blur-md border-r border-gray-200/50'>
           <div className='flex-1 flex flex-col pt-8 pb-4 overflow-y-auto'>
             <div className='flex items-center flex-shrink-0 px-6 mb-8'>
-              <div className='h-12 w-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg'>
-                <span className='text-xl font-bold text-white'>RK</span>
-              </div>
+              <img src='/logo.webp' alt='Rand Training College' className='h-12 w-auto mr-4' />
               <div>
                 <h1 className='text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent'>
-                  RK Institute
+                  Rand Training College
                 </h1>
                 <p className='text-xs text-gray-500 font-medium'>
                   Management System
@@ -287,7 +283,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
         <div className='sticky top-0 z-10 md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3'>
           <button
             type='button'
-            className='-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-blue-500/25 shadow-lg'
+            className='-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-orange-500/25 shadow-lg'
             onClick={() => setSidebarOpen(true)}
           >
             <span className='sr-only'>Open sidebar</span>

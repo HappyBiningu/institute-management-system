@@ -216,7 +216,7 @@ export default function ReportsPage() {
                 onClick={() => setActiveTab(tab.id as any)}
                 className={`flex-1 flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   activeTab === tab.id
-                    ? 'bg-white text-blue-600 shadow-sm'
+                    ? 'bg-white text-orange-600 shadow-sm'
                     : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
@@ -233,7 +233,7 @@ export default function ReportsPage() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-fade-in'>
               <div className='card-compact'>
                 <div className='flex items-center'>
-                  <div className='p-3 rounded-full bg-blue-100 text-blue-600 mr-4'>
+                  <div className='p-3 rounded-full bg-orange-100 text-orange-600 mr-4'>
                     <svg
                       className='w-6 h-6'
                       fill='none'
@@ -261,7 +261,7 @@ export default function ReportsPage() {
 
               <div className='card-compact'>
                 <div className='flex items-center'>
-                  <div className='p-3 rounded-full bg-green-100 text-green-600 mr-4'>
+                  <div className='p-3 rounded-full bg-orange-100 text-orange-600 mr-4'>
                     <svg
                       className='w-6 h-6'
                       fill='none'
@@ -317,7 +317,7 @@ export default function ReportsPage() {
 
               <div className='card-compact'>
                 <div className='flex items-center'>
-                  <div className='p-3 rounded-full bg-purple-100 text-purple-600 mr-4'>
+                  <div className='p-3 rounded-full bg-orange-100 text-orange-700 mr-4'>
                     <svg
                       className='w-6 h-6'
                       fill='none'
@@ -402,7 +402,7 @@ export default function ReportsPage() {
                         className='flex justify-between items-center p-4 bg-gray-50 rounded-lg'
                       >
                         <div className='flex items-center'>
-                          <div className='w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-bold mr-3'>
+                          <div className='w-8 h-8 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-sm font-bold mr-3'>
                             {index + 1}
                           </div>
                           <div>
@@ -430,7 +430,7 @@ export default function ReportsPage() {
             {/* Summary Stats */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in'>
               <div className='card-compact text-center'>
-                <div className='text-3xl font-bold text-blue-600 mb-2'>
+                <div className='text-3xl font-bold text-orange-600 mb-2'>
                   {reportData.totalFamilies}
                 </div>
                 <div className='text-sm font-medium text-gray-600'>
@@ -438,7 +438,7 @@ export default function ReportsPage() {
                 </div>
               </div>
               <div className='card-compact text-center'>
-                <div className='text-3xl font-bold text-green-600 mb-2'>
+                <div className='text-3xl font-bold text-orange-600 mb-2'>
                   {reportData.totalCourses}
                 </div>
                 <div className='text-sm font-medium text-gray-600'>
@@ -446,7 +446,7 @@ export default function ReportsPage() {
                 </div>
               </div>
               <div className='card-compact text-center'>
-                <div className='text-3xl font-bold text-purple-600 mb-2'>
+                <div className='text-3xl font-bold text-orange-700 mb-2'>
                   {reportData.totalServices}
                 </div>
                 <div className='text-sm font-medium text-gray-600'>
@@ -468,7 +468,7 @@ export default function ReportsPage() {
                 <button
                   onClick={() => generateAutomationReport('weekly')}
                   disabled={generatingReport === 'weekly'}
-                  className='bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 disabled:from-gray-400 disabled:to-gray-500 text-white px-6 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl disabled:cursor-not-allowed'
+                  className='bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 disabled:from-gray-400 disabled:to-gray-500 text-white px-6 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl disabled:cursor-not-allowed'
                 >
                   {generatingReport === 'weekly' ? (
                     <div className='flex items-center justify-center'>
@@ -488,7 +488,7 @@ export default function ReportsPage() {
                 <button
                   onClick={() => generateAutomationReport('monthly')}
                   disabled={generatingReport === 'monthly'}
-                  className='bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 disabled:from-gray-400 disabled:to-gray-500 text-white px-6 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl disabled:cursor-not-allowed'
+                  className='bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-700 hover:to-orange-700 disabled:from-gray-400 disabled:to-gray-500 text-white px-6 py-4 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl disabled:cursor-not-allowed'
                 >
                   {generatingReport === 'monthly' ? (
                     <div className='flex items-center justify-center'>
@@ -534,27 +534,27 @@ export default function ReportsPage() {
                 Automated Schedule
               </h2>
               <div className='space-y-4'>
-                <div className='flex items-center justify-between p-4 bg-green-50 rounded-xl border border-green-200'>
+                <div className='flex items-center justify-between p-4 bg-orange-50 rounded-xl border border-orange-200'>
                   <div>
-                    <h3 className='font-semibold text-green-800'>
+                    <h3 className='font-semibold text-orange-800'>
                       Weekly Performance Reports
                     </h3>
-                    <p className='text-sm text-green-600'>
+                    <p className='text-sm text-orange-600'>
                       Every Monday at 8:00 AM
                     </p>
                   </div>
-                  <div className='text-green-600'>📊</div>
+                  <div className='text-orange-600'>📊</div>
                 </div>
-                <div className='flex items-center justify-between p-4 bg-purple-50 rounded-xl border border-purple-200'>
+                <div className='flex items-center justify-between p-4 bg-orange-50 rounded-xl border border-orange-200'>
                   <div>
-                    <h3 className='font-semibold text-purple-800'>
+                    <h3 className='font-semibold text-orange-800'>
                       Monthly Analysis Reports
                     </h3>
-                    <p className='text-sm text-purple-600'>
+                    <p className='text-sm text-orange-700'>
                       1st day of every month at 8:00 AM
                     </p>
                   </div>
-                  <div className='text-purple-600'>📈</div>
+                  <div className='text-orange-700'>📈</div>
                 </div>
                 <div className='flex items-center justify-between p-4 bg-orange-50 rounded-xl border border-orange-200'>
                   <div>
@@ -613,7 +613,7 @@ export default function ReportsPage() {
                         <div
                           className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                             report.status === 'COMPLETED'
-                              ? 'bg-green-100 text-green-800'
+                              ? 'bg-orange-100 text-orange-800'
                               : report.status === 'GENERATING'
                                 ? 'bg-yellow-100 text-yellow-800'
                                 : 'bg-red-100 text-red-800'
@@ -624,9 +624,9 @@ export default function ReportsPage() {
                         <div
                           className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                             report.type === 'WEEKLY'
-                              ? 'bg-blue-100 text-blue-800'
+                              ? 'bg-orange-100 text-orange-800'
                               : report.type === 'MONTHLY'
-                                ? 'bg-purple-100 text-purple-800'
+                                ? 'bg-orange-100 text-orange-800'
                                 : 'bg-orange-100 text-orange-800'
                           }`}
                         >
@@ -639,7 +639,7 @@ export default function ReportsPage() {
                               '_blank'
                             )
                           }
-                          className='text-blue-600 hover:text-blue-800 text-sm font-medium'
+                          className='text-orange-600 hover:text-orange-800 text-sm font-medium'
                           disabled={report.status !== 'COMPLETED'}
                         >
                           {report.status === 'COMPLETED'

@@ -40,76 +40,76 @@ export default function PeopleBulkImportPage() {
 
           {/* Planned Features */}
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mt-8'>
-            <div className='p-8 bg-blue-50 rounded-xl text-left'>
+            <div className='p-8 bg-orange-50 rounded-xl text-left'>
               <div className='text-3xl mb-4'>📊</div>
               <h3 className='text-xl font-semibold text-gray-900 mb-4'>
                 Supported Formats
               </h3>
               <ul className='space-y-2 text-gray-600'>
                 <li className='flex items-center'>
-                  <span className='text-green-500 mr-2'>✓</span>
+                  <span className='text-orange-500 mr-2'>✓</span>
                   CSV files with custom delimiters
                 </li>
                 <li className='flex items-center'>
-                  <span className='text-green-500 mr-2'>✓</span>
+                  <span className='text-orange-500 mr-2'>✓</span>
                   Excel files (.xlsx, .xls)
                 </li>
                 <li className='flex items-center'>
-                  <span className='text-green-500 mr-2'>✓</span>
+                  <span className='text-orange-500 mr-2'>✓</span>
                   Google Sheets integration
                 </li>
                 <li className='flex items-center'>
-                  <span className='text-green-500 mr-2'>✓</span>
+                  <span className='text-orange-500 mr-2'>✓</span>
                   JSON data import
                 </li>
               </ul>
             </div>
 
-            <div className='p-8 bg-green-50 rounded-xl text-left'>
+            <div className='p-8 bg-orange-50 rounded-xl text-left'>
               <div className='text-3xl mb-4'>🔧</div>
               <h3 className='text-xl font-semibold text-gray-900 mb-4'>
                 Smart Features
               </h3>
               <ul className='space-y-2 text-gray-600'>
                 <li className='flex items-center'>
-                  <span className='text-green-500 mr-2'>✓</span>
+                  <span className='text-orange-500 mr-2'>✓</span>
                   Automatic data validation
                 </li>
                 <li className='flex items-center'>
-                  <span className='text-green-500 mr-2'>✓</span>
+                  <span className='text-orange-500 mr-2'>✓</span>
                   Duplicate detection and merging
                 </li>
                 <li className='flex items-center'>
-                  <span className='text-green-500 mr-2'>✓</span>
+                  <span className='text-orange-500 mr-2'>✓</span>
                   Field mapping and transformation
                 </li>
                 <li className='flex items-center'>
-                  <span className='text-green-500 mr-2'>✓</span>
+                  <span className='text-orange-500 mr-2'>✓</span>
                   Progress tracking and error reporting
                 </li>
               </ul>
             </div>
 
-            <div className='p-8 bg-purple-50 rounded-xl text-left'>
+            <div className='p-8 bg-orange-50 rounded-xl text-left'>
               <div className='text-3xl mb-4'>👥</div>
               <h3 className='text-xl font-semibold text-gray-900 mb-4'>
                 Import Types
               </h3>
               <ul className='space-y-2 text-gray-600'>
                 <li className='flex items-center'>
-                  <span className='text-green-500 mr-2'>✓</span>
+                  <span className='text-orange-500 mr-2'>✓</span>
                   Student records with enrollment data
                 </li>
                 <li className='flex items-center'>
-                  <span className='text-green-500 mr-2'>✓</span>
+                  <span className='text-orange-500 mr-2'>✓</span>
                   Family information and relationships
                 </li>
                 <li className='flex items-center'>
-                  <span className='text-green-500 mr-2'>✓</span>
+                  <span className='text-orange-500 mr-2'>✓</span>
                   User accounts and permissions
                 </li>
                 <li className='flex items-center'>
-                  <span className='text-green-500 mr-2'>✓</span>
+                  <span className='text-orange-500 mr-2'>✓</span>
                   Course enrollments and services
                 </li>
               </ul>
@@ -122,19 +122,19 @@ export default function PeopleBulkImportPage() {
               </h3>
               <ul className='space-y-2 text-gray-600'>
                 <li className='flex items-center'>
-                  <span className='text-green-500 mr-2'>✓</span>
+                  <span className='text-orange-500 mr-2'>✓</span>
                   Preview before import
                 </li>
                 <li className='flex items-center'>
-                  <span className='text-green-500 mr-2'>✓</span>
+                  <span className='text-orange-500 mr-2'>✓</span>
                   Rollback capabilities
                 </li>
                 <li className='flex items-center'>
-                  <span className='text-green-500 mr-2'>✓</span>
+                  <span className='text-orange-500 mr-2'>✓</span>
                   Audit trail and logging
                 </li>
                 <li className='flex items-center'>
-                  <span className='text-green-500 mr-2'>✓</span>
+                  <span className='text-orange-500 mr-2'>✓</span>
                   Data encryption and privacy
                 </li>
               </ul>

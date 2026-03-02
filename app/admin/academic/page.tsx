@@ -62,7 +62,7 @@ export default function AcademicsHubPage() {
       description: 'Create a new academic course offering',
       icon: '📚',
       href: '/admin/courses?action=add',
-      color: 'from-blue-500 to-blue-600'
+      color: 'from-orange-500 to-orange-600'
     },
     {
       id: 'add-service',
@@ -70,7 +70,7 @@ export default function AcademicsHubPage() {
       description: 'Create a new institute service',
       icon: '🚌',
       href: '/admin/services?action=add',
-      color: 'from-green-500 to-green-600'
+      color: 'from-orange-500 to-orange-600'
     },
     {
       id: 'create-log',
@@ -78,7 +78,7 @@ export default function AcademicsHubPage() {
       description: 'Record student academic progress',
       icon: '📝',
       href: '/admin/academic-logs?action=add',
-      color: 'from-purple-500 to-purple-600'
+      color: 'from-orange-500 to-orange-700'
     },
     {
       id: 'bulk-import',
@@ -98,7 +98,7 @@ export default function AcademicsHubPage() {
         'Manage academic courses, curriculum, and course-related fee structures',
       icon: '📚',
       href: '/admin/courses',
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-orange-500 to-orange-600',
       stats: stats
         ? [
             { label: 'Total Courses', value: stats.totalCourses },
@@ -117,7 +117,7 @@ export default function AcademicsHubPage() {
         'Manage institute services like transport, meals, and extracurricular activities',
       icon: '🚌',
       href: '/admin/services',
-      color: 'from-green-500 to-green-600',
+      color: 'from-orange-500 to-orange-600',
       stats: stats
         ? [
             { label: 'Total Services', value: stats.totalServices },
@@ -136,7 +136,7 @@ export default function AcademicsHubPage() {
         'Track student academic performance, assignments, and progress reports',
       icon: '📝',
       href: '/admin/academic-logs',
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-orange-500 to-orange-700',
       stats: stats
         ? [
             { label: 'Total Logs', value: stats.totalAcademicLogs },
@@ -179,7 +179,7 @@ export default function AcademicsHubPage() {
             </Link>
             <Link
               href='/admin/academic/reports'
-              className='bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl'
+              className='bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl'
             >
               📊 Academic Reports
             </Link>
@@ -214,7 +214,7 @@ export default function AcademicsHubPage() {
                     {action.icon}
                   </div>
                   <div className='flex-1'>
-                    <h3 className='font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-200'>
+                    <h3 className='font-semibold text-gray-900 group-hover:text-orange-600 transition-colors duration-200'>
                       {action.title}
                     </h3>
                   </div>
@@ -298,23 +298,23 @@ export default function AcademicsHubPage() {
           </h2>
           {stats ? (
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-              <div className='text-center p-4 bg-blue-50 rounded-xl'>
-                <div className='text-2xl font-bold text-blue-600'>
+              <div className='text-center p-4 bg-orange-50 rounded-xl'>
+                <div className='text-2xl font-bold text-orange-600'>
                   {stats.totalEnrollments}
                 </div>
-                <div className='text-sm text-blue-800'>Total Enrollments</div>
+                <div className='text-sm text-orange-800'>Total Enrollments</div>
               </div>
-              <div className='text-center p-4 bg-green-50 rounded-xl'>
-                <div className='text-2xl font-bold text-green-600'>
+              <div className='text-center p-4 bg-orange-50 rounded-xl'>
+                <div className='text-2xl font-bold text-orange-600'>
                   {stats.averageProgress}%
                 </div>
-                <div className='text-sm text-green-800'>Average Progress</div>
+                <div className='text-sm text-orange-800'>Average Progress</div>
               </div>
-              <div className='text-center p-4 bg-purple-50 rounded-xl'>
-                <div className='text-2xl font-bold text-purple-600'>
+              <div className='text-center p-4 bg-orange-50 rounded-xl'>
+                <div className='text-2xl font-bold text-orange-700'>
                   {stats.recentLogs}
                 </div>
-                <div className='text-sm text-purple-800'>
+                <div className='text-sm text-orange-800'>
                   Recent Logs (7 days)
                 </div>
               </div>

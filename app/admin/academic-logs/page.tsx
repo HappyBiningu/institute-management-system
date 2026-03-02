@@ -212,13 +212,13 @@ function AdminAcademicLogsContent() {
   const getLogTypeColor = (type: string) => {
     switch (type.toUpperCase()) {
       case 'ACHIEVEMENT':
-        return 'bg-green-100 text-green-800';
+        return 'bg-orange-100 text-orange-800';
       case 'CONCERN':
         return 'bg-red-100 text-red-800';
       case 'GENERAL':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-orange-100 text-orange-800';
       case 'PROGRESS':
-        return 'bg-purple-100 text-purple-800';
+        return 'bg-orange-100 text-orange-800';
       default:
         return 'bg-gray-100 text-gray-800';
     }
@@ -228,7 +228,7 @@ function AdminAcademicLogsContent() {
     return (
       <AdminLayout>
         <div className='flex items-center justify-center h-64'>
-          <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600'></div>
+          <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-orange-600'></div>
         </div>
       </AdminLayout>
     );
@@ -260,9 +260,9 @@ function AdminAcademicLogsContent() {
         <div className='grid grid-cols-1 md:grid-cols-4 gap-6'>
           <div className='bg-white rounded-lg shadow-md p-6'>
             <div className='flex items-center'>
-              <div className='p-3 bg-blue-100 rounded-lg'>
+              <div className='p-3 bg-orange-100 rounded-lg'>
                 <svg
-                  className='w-6 h-6 text-blue-600'
+                  className='w-6 h-6 text-orange-600'
                   fill='none'
                   stroke='currentColor'
                   viewBox='0 0 24 24'
@@ -286,9 +286,9 @@ function AdminAcademicLogsContent() {
 
           <div className='bg-white rounded-lg shadow-md p-6'>
             <div className='flex items-center'>
-              <div className='p-3 bg-green-100 rounded-lg'>
+              <div className='p-3 bg-orange-100 rounded-lg'>
                 <svg
-                  className='w-6 h-6 text-green-600'
+                  className='w-6 h-6 text-orange-600'
                   fill='none'
                   stroke='currentColor'
                   viewBox='0 0 24 24'
@@ -340,9 +340,9 @@ function AdminAcademicLogsContent() {
 
           <div className='bg-white rounded-lg shadow-md p-6'>
             <div className='flex items-center'>
-              <div className='p-3 bg-purple-100 rounded-lg'>
+              <div className='p-3 bg-orange-100 rounded-lg'>
                 <svg
-                  className='w-6 h-6 text-purple-600'
+                  className='w-6 h-6 text-orange-700'
                   fill='none'
                   stroke='currentColor'
                   viewBox='0 0 24 24'
@@ -385,7 +385,7 @@ function AdminAcademicLogsContent() {
                 placeholder='Search logs, students, teachers...'
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
-                className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+                className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500'
               />
             </div>
 
@@ -397,7 +397,7 @@ function AdminAcademicLogsContent() {
               <select
                 value={filterStudent}
                 onChange={e => setFilterStudent(e.target.value)}
-                className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+                className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500'
               >
                 <option value=''>All Students</option>
                 {students.map(student => (
@@ -416,7 +416,7 @@ function AdminAcademicLogsContent() {
               <select
                 value={filterTeacher}
                 onChange={e => setFilterTeacher(e.target.value)}
-                className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+                className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500'
               >
                 <option value=''>All Teachers</option>
                 {teachers.map(teacher => (
@@ -435,7 +435,7 @@ function AdminAcademicLogsContent() {
               <select
                 value={filterLogType}
                 onChange={e => setFilterLogType(e.target.value)}
-                className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+                className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500'
               >
                 <option value=''>All Types</option>
                 <option value='ACHIEVEMENT'>Achievement</option>
@@ -455,7 +455,7 @@ function AdminAcademicLogsContent() {
               <select
                 value={filterPrivacy}
                 onChange={e => setFilterPrivacy(e.target.value)}
-                className='px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+                className='px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500'
               >
                 <option value=''>All Logs</option>
                 <option value='public'>Public Only</option>
@@ -471,7 +471,7 @@ function AdminAcademicLogsContent() {
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e.target.value)}
-                className='px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+                className='px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500'
               >
                 <option value='createdAt'>Date Created</option>
                 <option value='title'>Title</option>
@@ -488,7 +488,7 @@ function AdminAcademicLogsContent() {
               <select
                 value={sortOrder}
                 onChange={e => setSortOrder(e.target.value as 'asc' | 'desc')}
-                className='px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+                className='px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500'
               >
                 <option value='desc'>Newest First</option>
                 <option value='asc'>Oldest First</option>
@@ -549,7 +549,7 @@ function AdminAcademicLogsContent() {
                           {log.content.substring(0, 100)}...
                         </div>
                         {log.subject && (
-                          <div className='text-xs text-blue-600 mt-1'>
+                          <div className='text-xs text-orange-600 mt-1'>
                             Subject: {log.subject}
                           </div>
                         )}
@@ -604,7 +604,7 @@ function AdminAcademicLogsContent() {
                     <td className='px-6 py-4 text-sm font-medium'>
                       <Link
                         href={`/admin/academic-logs/${log.id}`}
-                        className='text-blue-600 hover:text-blue-900'
+                        className='text-orange-600 hover:text-orange-900'
                       >
                         View Details
                       </Link>

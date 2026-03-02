@@ -125,11 +125,11 @@ export default function UsersPage() {
       case 'ADMIN':
         return 'bg-red-100 text-red-800';
       case 'TEACHER':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-orange-100 text-orange-800';
       case 'PARENT':
-        return 'bg-green-100 text-green-800';
+        return 'bg-orange-100 text-orange-800';
       case 'STUDENT':
-        return 'bg-purple-100 text-purple-800';
+        return 'bg-orange-100 text-orange-800';
       default:
         return 'bg-gray-100 text-gray-800';
     }
@@ -252,7 +252,7 @@ export default function UsersPage() {
                       <span
                         className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                           user.isActive
-                            ? 'bg-green-100 text-green-800'
+                            ? 'bg-orange-100 text-orange-800'
                             : 'bg-red-100 text-red-800'
                         }`}
                       >
@@ -268,7 +268,7 @@ export default function UsersPage() {
                       <div className='flex space-x-2'>
                         <button
                           onClick={() => handleEdit(user)}
-                          className='bg-blue-100 hover:bg-blue-200 text-blue-700 px-2 py-1 rounded text-xs font-medium transition-colors duration-200'
+                          className='bg-orange-100 hover:bg-orange-200 text-orange-700 px-2 py-1 rounded text-xs font-medium transition-colors duration-200'
                         >
                           Edit
                         </button>
@@ -279,7 +279,7 @@ export default function UsersPage() {
                           className={`px-2 py-1 rounded text-xs font-medium transition-colors duration-200 ${
                             user.isActive
                               ? 'bg-yellow-100 hover:bg-yellow-200 text-yellow-700'
-                              : 'bg-green-100 hover:bg-green-200 text-green-700'
+                              : 'bg-orange-100 hover:bg-orange-200 text-orange-700'
                           }`}
                         >
                           {user.isActive ? 'Deactivate' : 'Activate'}

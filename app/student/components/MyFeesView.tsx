@@ -128,14 +128,14 @@ export default function MyFeesView() {
 
   const getStatusColor = (status: string) => {
     return status === 'PAID'
-      ? 'text-green-600 bg-green-100'
+      ? 'text-orange-600 bg-orange-100'
       : 'text-red-600 bg-red-100';
   };
 
   if (loading) {
     return (
       <div className='flex items-center justify-center py-12'>
-        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>
+        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-orange-600'></div>
       </div>
     );
   }
@@ -156,12 +156,12 @@ export default function MyFeesView() {
           <div className='flex items-center justify-between'>
             <div>
               <p className='text-sm font-medium text-gray-600'>Total Paid</p>
-              <p className='text-2xl font-bold text-green-600'>
+              <p className='text-2xl font-bold text-orange-600'>
                 ₹{totalPaid.toLocaleString()}
               </p>
               <p className='text-sm text-gray-500 mt-1'>This academic year</p>
             </div>
-            <div className='p-3 bg-green-100 rounded-lg'>
+            <div className='p-3 bg-orange-100 rounded-lg'>
               <span className='text-2xl'>✅</span>
             </div>
           </div>
@@ -174,7 +174,7 @@ export default function MyFeesView() {
                 Outstanding Dues
               </p>
               <p
-                className={`text-2xl font-bold ${totalOutstanding > 0 ? 'text-red-600' : 'text-green-600'}`}
+                className={`text-2xl font-bold ${totalOutstanding > 0 ? 'text-red-600' : 'text-orange-600'}`}
               >
                 ₹{totalOutstanding.toLocaleString()}
               </p>
@@ -183,7 +183,7 @@ export default function MyFeesView() {
               </p>
             </div>
             <div
-              className={`p-3 rounded-lg ${totalOutstanding > 0 ? 'bg-red-100' : 'bg-green-100'}`}
+              className={`p-3 rounded-lg ${totalOutstanding > 0 ? 'bg-red-100' : 'bg-orange-100'}`}
             >
               <span className='text-2xl'>
                 {totalOutstanding > 0 ? '⚠️' : '🎉'}
@@ -196,10 +196,10 @@ export default function MyFeesView() {
           <div className='flex items-center justify-between'>
             <div>
               <p className='text-sm font-medium text-gray-600'>Monthly Fee</p>
-              <p className='text-2xl font-bold text-blue-600'>₹8,500</p>
+              <p className='text-2xl font-bold text-orange-600'>₹8,500</p>
               <p className='text-sm text-gray-500 mt-1'>After discounts</p>
             </div>
-            <div className='p-3 bg-blue-100 rounded-lg'>
+            <div className='p-3 bg-orange-100 rounded-lg'>
               <span className='text-2xl'>💰</span>
             </div>
           </div>
@@ -244,7 +244,7 @@ export default function MyFeesView() {
               <span>Gross Amount:</span>
               <span>₹9,000</span>
             </div>
-            <div className='flex justify-between items-center text-green-600'>
+            <div className='flex justify-between items-center text-orange-600'>
               <span>Merit Discount:</span>
               <span>-₹500</span>
             </div>
@@ -265,7 +265,7 @@ export default function MyFeesView() {
           <select
             value={selectedPeriod}
             onChange={e => setSelectedPeriod(e.target.value)}
-            className='border border-gray-300 rounded-lg px-3 py-1 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+            className='border border-gray-300 rounded-lg px-3 py-1 text-sm focus:ring-2 focus:ring-orange-500 focus:border-transparent'
           >
             <option value='current'>Current Year</option>
             <option value='last'>Last Year</option>
@@ -304,7 +304,7 @@ export default function MyFeesView() {
                   ₹{allocation.netAmount.toLocaleString()}
                 </div>
                 {allocation.discountAmount > 0 && (
-                  <div className='text-sm text-green-600'>
+                  <div className='text-sm text-orange-600'>
                     Discount: ₹{allocation.discountAmount.toLocaleString()}
                   </div>
                 )}
@@ -326,7 +326,7 @@ export default function MyFeesView() {
               className='flex items-center justify-between p-4 border border-gray-200 rounded-lg'
             >
               <div className='flex items-center space-x-4'>
-                <div className='p-2 bg-green-100 rounded-lg'>
+                <div className='p-2 bg-orange-100 rounded-lg'>
                   <span className='text-lg'>
                     {getPaymentMethodIcon(payment.paymentMethod)}
                   </span>
@@ -344,7 +344,7 @@ export default function MyFeesView() {
                   </div>
                 </div>
               </div>
-              <div className='text-green-600 font-medium'>✅ Completed</div>
+              <div className='text-orange-600 font-medium'>✅ Completed</div>
             </div>
           ))}
         </div>
@@ -369,7 +369,7 @@ export default function MyFeesView() {
               <strong>Office Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM
             </p>
             <p>
-              <strong>Contact:</strong> +1-217-555-0100 | fees@rkinstitute.com
+              <strong>Contact:</strong> +1-217-555-0100 | fees@randtrainingcollege.com
             </p>
           </div>
         </div>

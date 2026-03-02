@@ -215,7 +215,7 @@ export default function CoursesPage() {
                       <div className='flex space-x-3'>
                         <button
                           onClick={() => handleEdit(course)}
-                          className='bg-blue-100 hover:bg-blue-200 text-blue-700 px-3 py-1 rounded-lg text-sm font-medium transition-colors duration-200'
+                          className='bg-orange-100 hover:bg-orange-200 text-orange-700 px-3 py-1 rounded-lg text-sm font-medium transition-colors duration-200'
                         >
                           Edit
                         </button>

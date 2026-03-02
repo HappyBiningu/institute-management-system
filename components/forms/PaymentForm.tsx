@@ -302,7 +302,7 @@ export default function PaymentForm({
 
       {/* Pending Allocations */}
       {pendingAllocations.length > 0 && (
-        <div className='bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-6 border border-blue-200'>
+        <div className='bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-6 border border-orange-200'>
           <h4 className='text-xl font-bold text-gray-900 mb-4'>
             Pending Fee Allocations
           </h4>
@@ -318,7 +318,7 @@ export default function PaymentForm({
                     id={`allocation-${allocation.id}`}
                     checked={selectedAllocations.includes(allocation.id)}
                     onChange={() => handleAllocationToggle(allocation.id)}
-                    className='h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded'
+                    className='h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded'
                   />
                   <label
                     htmlFor={`allocation-${allocation.id}`}
@@ -334,7 +334,7 @@ export default function PaymentForm({
                   </label>
                 </div>
                 <div className='text-right'>
-                  <div className='font-bold text-green-600'>
+                  <div className='font-bold text-orange-600'>
                     ₹{allocation.netAmount.toFixed(2)}
                   </div>
                   <div className='text-xs text-gray-500'>
@@ -346,12 +346,12 @@ export default function PaymentForm({
           </div>
 
           {selectedAllocations.length > 0 && (
-            <div className='mt-4 p-3 bg-green-50 rounded-lg border border-green-200'>
+            <div className='mt-4 p-3 bg-orange-50 rounded-lg border border-orange-200'>
               <div className='flex justify-between items-center'>
-                <span className='font-medium text-green-800'>
+                <span className='font-medium text-orange-800'>
                   Total Amount:
                 </span>
-                <span className='text-xl font-bold text-green-900'>
+                <span className='text-xl font-bold text-orange-900'>
                   ₹{calculateTotalAmount().toFixed(2)}
                 </span>
               </div>

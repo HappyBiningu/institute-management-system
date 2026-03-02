@@ -11,7 +11,7 @@ export default function AdminDashboard() {
             Dashboard
           </h1>
           <p className='mt-2 text-lg text-gray-600'>
-            Welcome to the RK Institute Management System
+            Welcome to the Rand Training College System
           </p>
         </div>
 
@@ -20,7 +20,7 @@ export default function AdminDashboard() {
           <div className='card-compact group hover:scale-105 transition-transform duration-300'>
             <div className='flex items-center'>
               <div className='flex-shrink-0'>
-                <div className='w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300'>
+                <div className='w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300'>
                   <svg
                     className='w-7 h-7 text-white'
                     fill='none'
@@ -54,7 +54,7 @@ export default function AdminDashboard() {
           <div className='card-compact group hover:scale-105 transition-transform duration-300'>
             <div className='flex items-center'>
               <div className='flex-shrink-0'>
-                <div className='w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300'>
+                <div className='w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300'>
                   <svg
                     className='w-7 h-7 text-white'
                     fill='none'
@@ -82,7 +82,7 @@ export default function AdminDashboard() {
           <div className='card-compact group hover:scale-105 transition-transform duration-300'>
             <div className='flex items-center'>
               <div className='flex-shrink-0'>
-                <div className='w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300'>
+                <div className='w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-700 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300'>
                   <svg
                     className='w-7 h-7 text-white'
                     fill='none'
@@ -144,9 +144,9 @@ export default function AdminDashboard() {
           <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
             <a
               href='/admin/courses'
-              className='group relative bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl border border-blue-200 hover:border-blue-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-1'
+              className='group relative bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl border border-orange-200 hover:border-orange-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-1'
             >
-              <div className='flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg'>
+              <div className='flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg'>
                 <svg
                   className='w-8 h-8 text-white'
                   fill='none'
@@ -171,9 +171,9 @@ export default function AdminDashboard() {
 
             <a
               href='/admin/services'
-              className='group relative bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl border border-green-200 hover:border-green-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-1'
+              className='group relative bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl border border-orange-200 hover:border-orange-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-1'
             >
-              <div className='flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg'>
+              <div className='flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg'>
                 <svg
                   className='w-8 h-8 text-white'
                   fill='none'
@@ -198,9 +198,9 @@ export default function AdminDashboard() {
 
             <a
               href='/admin/students'
-              className='group relative bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl border border-purple-200 hover:border-purple-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-1'
+              className='group relative bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl border border-orange-200 hover:border-orange-300 transition-all duration-300 hover:shadow-xl hover:-translate-y-1'
             >
-              <div className='flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg'>
+              <div className='flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-700 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg'>
                 <svg
                   className='w-8 h-8 text-white'
                   fill='none'

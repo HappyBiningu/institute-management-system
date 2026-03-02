@@ -249,7 +249,7 @@ export default function FamiliesPage() {
                     </td>
                     <td className='table-cell'>
                       {family.discountAmount > 0 ? (
-                        <span className='inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800'>
+                        <span className='inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800'>
                           ₹{family.discountAmount}
                         </span>
                       ) : (
@@ -260,7 +260,7 @@ export default function FamiliesPage() {
                       <div className='flex space-x-3'>
                         <button
                           onClick={() => handleEdit(family)}
-                          className='bg-blue-100 hover:bg-blue-200 text-blue-700 px-3 py-1 rounded-lg text-sm font-medium transition-colors duration-200'
+                          className='bg-orange-100 hover:bg-orange-200 text-orange-700 px-3 py-1 rounded-lg text-sm font-medium transition-colors duration-200'
                         >
                           Edit
                         </button>

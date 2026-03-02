@@ -66,7 +66,7 @@ export default function FinancialsHubPage() {
       description: 'Record a new payment from a family',
       icon: '💰',
       href: '/admin/payments?action=add',
-      color: 'from-green-500 to-green-600'
+      color: 'from-orange-500 to-orange-600'
     },
     {
       id: 'generate-bills',
@@ -74,7 +74,7 @@ export default function FinancialsHubPage() {
       description: 'Create monthly fee allocations',
       icon: '📄',
       href: '/admin/fees?action=generate',
-      color: 'from-blue-500 to-blue-600'
+      color: 'from-orange-500 to-orange-600'
     },
     {
       id: 'send-reminders',
@@ -90,7 +90,7 @@ export default function FinancialsHubPage() {
       description: 'Generate comprehensive financial reports',
       icon: '📊',
       href: '/admin/reports?tab=automated',
-      color: 'from-purple-500 to-purple-600'
+      color: 'from-orange-500 to-orange-700'
     }
   ];
 
@@ -101,7 +101,7 @@ export default function FinancialsHubPage() {
       description: 'Manage fee structures, allocations, and billing cycles',
       icon: '💳',
       href: '/admin/fees',
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-orange-500 to-orange-600',
       stats: stats
         ? [
             { label: 'Total Allocations', value: stats.totalFeeAllocations },
@@ -117,7 +117,7 @@ export default function FinancialsHubPage() {
         'Record payments, track transactions, and manage payment history',
       icon: '💰',
       href: '/admin/payments',
-      color: 'from-green-500 to-green-600',
+      color: 'from-orange-500 to-orange-600',
       stats: stats
         ? [
             {
@@ -188,7 +188,7 @@ export default function FinancialsHubPage() {
             </Link>
             <Link
               href='/admin/reports'
-              className='bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl'
+              className='bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl'
             >
               📊 Reports & Analytics
             </Link>
@@ -212,11 +212,11 @@ export default function FinancialsHubPage() {
                 <p className='text-sm font-medium text-gray-600'>
                   Monthly Revenue
                 </p>
-                <p className='text-2xl font-bold text-green-600'>
+                <p className='text-2xl font-bold text-orange-600'>
                   ₹{stats?.totalRevenueThisMonth?.toLocaleString() || '0'}
                 </p>
               </div>
-              <div className='text-green-500 text-2xl'>💰</div>
+              <div className='text-orange-500 text-2xl'>💰</div>
             </div>
             <p className='text-xs text-gray-500 mt-2'>
               Current month collections
@@ -244,11 +244,11 @@ export default function FinancialsHubPage() {
                 <p className='text-sm font-medium text-gray-600'>
                   Collection Rate
                 </p>
-                <p className='text-2xl font-bold text-blue-600'>
+                <p className='text-2xl font-bold text-orange-600'>
                   {stats?.collectionEfficiency || 0}%
                 </p>
               </div>
-              <div className='text-blue-500 text-2xl'>📊</div>
+              <div className='text-orange-500 text-2xl'>📊</div>
             </div>
             <p className='text-xs text-gray-500 mt-2'>Payment efficiency</p>
           </div>
@@ -259,11 +259,11 @@ export default function FinancialsHubPage() {
                 <p className='text-sm font-medium text-gray-600'>
                   Recent Payments
                 </p>
-                <p className='text-2xl font-bold text-purple-600'>
+                <p className='text-2xl font-bold text-orange-700'>
                   {stats?.recentPaymentActivity || 0}
                 </p>
               </div>
-              <div className='text-purple-500 text-2xl'>🔄</div>
+              <div className='text-orange-500 text-2xl'>🔄</div>
             </div>
             <p className='text-xs text-gray-500 mt-2'>Last 7 days</p>
           </div>
@@ -288,7 +288,7 @@ export default function FinancialsHubPage() {
                     {action.icon}
                   </div>
                   <div className='flex-1'>
-                    <h3 className='font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-200'>
+                    <h3 className='font-semibold text-gray-900 group-hover:text-orange-600 transition-colors duration-200'>
                       {action.title}
                     </h3>
                   </div>
@@ -372,11 +372,11 @@ export default function FinancialsHubPage() {
           </h2>
           {stats ? (
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-              <div className='text-center p-4 bg-green-50 rounded-xl'>
-                <div className='text-2xl font-bold text-green-600'>
+              <div className='text-center p-4 bg-orange-50 rounded-xl'>
+                <div className='text-2xl font-bold text-orange-600'>
                   {stats.paidAllocations}
                 </div>
-                <div className='text-sm text-green-800'>Paid Allocations</div>
+                <div className='text-sm text-orange-800'>Paid Allocations</div>
                 <div className='text-xs text-gray-500 mt-1'>
                   {(
                     (stats.paidAllocations / stats.totalFeeAllocations) *
@@ -409,11 +409,11 @@ export default function FinancialsHubPage() {
                   Require immediate attention
                 </div>
               </div>
-              <div className='text-center p-4 bg-blue-50 rounded-xl'>
-                <div className='text-2xl font-bold text-blue-600'>
+              <div className='text-center p-4 bg-orange-50 rounded-xl'>
+                <div className='text-2xl font-bold text-orange-600'>
                   ₹{stats.averageMonthlyRevenue?.toLocaleString()}
                 </div>
-                <div className='text-sm text-blue-800'>Avg Monthly Revenue</div>
+                <div className='text-sm text-orange-800'>Avg Monthly Revenue</div>
                 <div className='text-xs text-gray-500 mt-1'>Last 6 months</div>
               </div>
             </div>

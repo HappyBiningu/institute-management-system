@@ -1,5 +1,5 @@
 // Production Assignments API Test
-const PRODUCTION_URL = 'https://rk-institute-management-system.vercel.app';
+const PRODUCTION_URL = 'https://rand-training-college-management-system.vercel.app';
 
 async function testProductionAssignments() {
   console.log('🧪 Testing Assignments System on Production...\n');
@@ -13,7 +13,7 @@ async function testProductionAssignments() {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        email: 'admin@rkinstitute.com',
+        email: 'admin@randtrainingcollege.com',
         password: 'admin123'
       })
     });

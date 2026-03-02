@@ -1,8 +1,8 @@
-# 🚀 RK Institute Management System - Production Deployment
+# 🚀 Rand Training College Management System - Production Deployment
 
 ## **📋 Overview**
 
-This folder contains the production-ready deployment version of the RK Institute Management System. All development files, sensitive information, and unnecessary artifacts have been removed for security and performance.
+This folder contains the production-ready deployment version of the Rand Training College Management System. All development files, sensitive information, and unnecessary artifacts have been removed for security and performance.
 
 **Latest Update**: Fixed tsconfig.json for Vercel deployment compatibility.
 

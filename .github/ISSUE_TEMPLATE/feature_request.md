@@ -1,6 +1,6 @@
 ---
 name: ✨ Feature Request
-about: Suggest a new feature for the RK Institute Management System
+about: Suggest a new feature for the Rand Training College Management System
 title: '[FEATURE] '
 labels: ['enhancement', 'needs-triage']
 assignees: ['IamNeoNerd']

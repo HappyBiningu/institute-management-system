@@ -1,7 +1,7 @@
 {
-  "name": "rk-institute-management-system",
+  "name": "rand-training-college-management-system",
   "version": "1.1.0",
-  "description": "RK Institute Management System - Production Ready with Assignments",
+  "description": "Rand Training College Management System - Production Ready with Assignments",
   "private": true,
   "scripts": {
     "build": "prisma migrate deploy && prisma generate && next build",
@@ -77,6 +77,6 @@
     "typescript",
     "postgresql"
   ],
-  "author": "RK Institute",
+  "author": "Rand Training College",
   "license": "PROPRIETARY"
 }

@@ -289,7 +289,7 @@ export default function UserForm({ user, onSuccess, onCancel }: UserFormProps) {
             id='isActive'
             checked={formData.isActive}
             onChange={handleChange}
-            className='h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded'
+            className='h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded'
           />
           <label
             htmlFor='isActive'
@@ -303,9 +303,9 @@ export default function UserForm({ user, onSuccess, onCancel }: UserFormProps) {
         </p>
       </div>
 
-      <div className='bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-6 border border-blue-200'>
+      <div className='bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-6 border border-orange-200'>
         <h4 className='text-xl font-bold text-gray-900 mb-4 flex items-center'>
-          <span className='w-8 h-8 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-3'>
+          <span className='w-8 h-8 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mr-3'>
             <svg
               className='w-4 h-4 text-white'
               fill='none'
