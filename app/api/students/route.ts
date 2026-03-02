@@ -84,10 +84,24 @@ export async function POST(request: Request) {
     const student = await prisma.student.create({
       data: {
         name,
+        surname: body.surname || null,
+        idNumber: body.idNumber || null,
+        gender: body.gender || null,
+        ethnicity: body.ethnicity || null,
+        homeLanguage: body.homeLanguage || null,
+        address: body.address || null,
+        city: body.city || null,
+        postalCode: body.postalCode || null,
+        phoneNumber: body.phoneNumber || null,
+        email: body.email || null,
         grade: grade || null,
         dateOfBirth: dateOfBirth ? new Date(dateOfBirth) : null,
         enrollmentDate: enrollmentDate ? new Date(enrollmentDate) : new Date(),
-        familyId
+        familyId,
+        emergencyContactName: body.emergencyContactName || null,
+        emergencyContactPhone: body.emergencyContactPhone || null,
+        previousSchool: body.previousSchool || null,
+        medicalConditions: body.medicalConditions || null,
       },
       include: {
         family: {

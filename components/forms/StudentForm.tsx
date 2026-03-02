@@ -11,10 +11,24 @@ interface Family {
 interface Student {
   id: string;
   name: string;
+  surname?: string;
+  idNumber?: string;
+  gender?: string;
+  ethnicity?: string;
+  homeLanguage?: string;
+  address?: string;
+  city?: string;
+  postalCode?: string;
+  phoneNumber?: string;
+  email?: string;
   grade?: string;
   dateOfBirth?: string;
   enrollmentDate: string;
   family: Family;
+  emergencyContactName?: string;
+  emergencyContactPhone?: string;
+  previousSchool?: string;
+  medicalConditions?: string;
   subscriptions: any[];
   _count: {
     subscriptions: number;
@@ -35,10 +49,24 @@ export default function StudentForm({
 }: StudentFormProps) {
   const [formData, setFormData] = useState({
     name: '',
+    surname: '',
+    idNumber: '',
+    gender: '',
+    ethnicity: '',
+    homeLanguage: '',
+    address: '',
+    city: '',
+    postalCode: '',
+    phoneNumber: '',
+    email: '',
     grade: '',
     dateOfBirth: '',
     enrollmentDate: '',
-    familyId: ''
+    familyId: '',
+    emergencyContactName: '',
+    emergencyContactPhone: '',
+    previousSchool: '',
+    medicalConditions: ''
   });
   const [families, setFamilies] = useState<Family[]>([]);
   const [loading, setLoading] = useState(false);
@@ -50,15 +78,28 @@ export default function StudentForm({
     if (student) {
       setFormData({
         name: student.name,
+        surname: student.surname || '',
+        idNumber: student.idNumber || '',
+        gender: student.gender || '',
+        ethnicity: student.ethnicity || '',
+        homeLanguage: student.homeLanguage || '',
+        address: student.address || '',
+        city: student.city || '',
+        postalCode: student.postalCode || '',
+        phoneNumber: student.phoneNumber || '',
+        email: student.email || '',
         grade: student.grade || '',
         dateOfBirth: student.dateOfBirth
           ? student.dateOfBirth.split('T')[0]
           : '',
         enrollmentDate: student.enrollmentDate.split('T')[0],
-        familyId: student.family.id
+        familyId: student.family.id,
+        emergencyContactName: student.emergencyContactName || '',
+        emergencyContactPhone: student.emergencyContactPhone || '',
+        previousSchool: student.previousSchool || '',
+        medicalConditions: student.medicalConditions || ''
       });
     } else {
-      // Set default enrollment date to today
       setFormData(prev => ({
         ...prev,
         enrollmentDate: new Date().toISOString().split('T')[0]
@@ -94,21 +135,13 @@ export default function StudentForm({
       const url = student ? `/api/students/${student.id}` : '/api/students';
       const method = student ? 'PUT' : 'POST';
 
-      const payload = {
-        name: formData.name,
-        grade: formData.grade || null,
-        dateOfBirth: formData.dateOfBirth || null,
-        enrollmentDate: formData.enrollmentDate,
-        familyId: formData.familyId
-      };
-
       const response = await fetch(url, {
         method,
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`
         },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(formData)
       });
 
       if (response.ok) {
@@ -126,7 +159,7 @@ export default function StudentForm({
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -140,174 +173,122 @@ export default function StudentForm({
       {error && (
         <div className='bg-red-50 border border-red-200 text-red-700 px-6 py-4 rounded-xl'>
           <div className='flex items-center'>
-            <svg
-              className='w-5 h-5 text-red-500 mr-2'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
-              />
+            <svg className='w-5 h-5 text-red-500 mr-2' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' />
             </svg>
             {error}
           </div>
         </div>
       )}
 
+      <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+        <div className='lg:col-span-1'>
+          <h4 className='text-sm font-bold text-gray-500 uppercase tracking-wider mb-4'>Personal Information</h4>
+          <div className='space-y-4'>
+            <div>
+              <label htmlFor='name' className='block text-xs font-semibold text-gray-700 mb-1'>First Name *</label>
+              <input type='text' name='name' id='name' required className='input-field' value={formData.name} onChange={handleChange} />
+            </div>
+            <div>
+              <label htmlFor='surname' className='block text-xs font-semibold text-gray-700 mb-1'>Surname</label>
+              <input type='text' name='surname' id='surname' className='input-field' value={formData.surname} onChange={handleChange} />
+            </div>
+            <div>
+              <label htmlFor='idNumber' className='block text-xs font-semibold text-gray-700 mb-1'>ID/Passport Number</label>
+              <input type='text' name='idNumber' id='idNumber' className='input-field' value={formData.idNumber} onChange={handleChange} />
+            </div>
+            <div>
+              <label htmlFor='gender' className='block text-xs font-semibold text-gray-700 mb-1'>Gender</label>
+              <select name='gender' id='gender' className='input-field' value={formData.gender} onChange={handleChange}>
+                <option value=''>Select Gender</option>
+                <option value='MALE'>Male</option>
+                <option value='FEMALE'>Female</option>
+                <option value='OTHER'>Other</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div className='lg:col-span-1'>
+          <h4 className='text-sm font-bold text-gray-500 uppercase tracking-wider mb-4'>Contact Information</h4>
+          <div className='space-y-4'>
+            <div>
+              <label htmlFor='email' className='block text-xs font-semibold text-gray-700 mb-1'>Email Address</label>
+              <input type='email' name='email' id='email' className='input-field' value={formData.email} onChange={handleChange} />
+            </div>
+            <div>
+              <label htmlFor='phoneNumber' className='block text-xs font-semibold text-gray-700 mb-1'>Phone Number</label>
+              <input type='text' name='phoneNumber' id='phoneNumber' className='input-field' value={formData.phoneNumber} onChange={handleChange} />
+            </div>
+            <div>
+              <label htmlFor='address' className='block text-xs font-semibold text-gray-700 mb-1'>Residential Address</label>
+              <input type='text' name='address' id='address' className='input-field' value={formData.address} onChange={handleChange} />
+            </div>
+            <div className='grid grid-cols-2 gap-2'>
+              <div>
+                <label htmlFor='city' className='block text-xs font-semibold text-gray-700 mb-1'>City</label>
+                <input type='text' name='city' id='city' className='input-field' value={formData.city} onChange={handleChange} />
+              </div>
+              <div>
+                <label htmlFor='postalCode' className='block text-xs font-semibold text-gray-700 mb-1'>Postal Code</label>
+                <input type='text' name='postalCode' id='postalCode' className='input-field' value={formData.postalCode} onChange={handleChange} />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className='lg:col-span-1'>
+          <h4 className='text-sm font-bold text-gray-500 uppercase tracking-wider mb-4'>Academic & Family</h4>
+          <div className='space-y-4'>
+            <div>
+              <label htmlFor='familyId' className='block text-xs font-semibold text-gray-700 mb-1'>Family *</label>
+              <select name='familyId' id='familyId' required className='input-field' value={formData.familyId} onChange={handleChange}>
+                <option value=''>Select a family</option>
+                {families.map(f => <option key={f.id} value={f.id}>{f.name}</option>)}
+              </select>
+            </div>
+            <div>
+              <label htmlFor='grade' className='block text-xs font-semibold text-gray-700 mb-1'>Course/Grade</label>
+              <input type='text' name='grade' id='grade' className='input-field' value={formData.grade} onChange={handleChange} />
+            </div>
+            <div>
+              <label htmlFor='enrollmentDate' className='block text-xs font-semibold text-gray-700 mb-1'>Enrollment Date *</label>
+              <input type='date' name='enrollmentDate' id='enrollmentDate' required className='input-field' value={formData.enrollmentDate} onChange={handleChange} />
+            </div>
+            <div>
+              <label htmlFor='previousSchool' className='block text-xs font-semibold text-gray-700 mb-1'>Previous School</label>
+              <input type='text' name='previousSchool' id='previousSchool' className='input-field' value={formData.previousSchool} onChange={handleChange} />
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className='grid grid-cols-1 gap-6 sm:grid-cols-2'>
         <div>
-          <label
-            htmlFor='name'
-            className='block text-sm font-semibold text-gray-700 mb-2'
-          >
-            Student Name *
-          </label>
-          <input
-            type='text'
-            name='name'
-            id='name'
-            required
-            className='input-field'
-            value={formData.name}
-            onChange={handleChange}
-            placeholder='e.g., John Smith'
-          />
+          <h4 className='text-sm font-bold text-gray-500 uppercase tracking-wider mb-4'>Emergency & Medical</h4>
+          <div className='space-y-4'>
+            <div className='grid grid-cols-2 gap-2'>
+              <div>
+                <label htmlFor='emergencyContactName' className='block text-xs font-semibold text-gray-700 mb-1'>Emergency Contact</label>
+                <input type='text' name='emergencyContactName' id='emergencyContactName' className='input-field' value={formData.emergencyContactName} onChange={handleChange} />
+              </div>
+              <div>
+                <label htmlFor='emergencyContactPhone' className='block text-xs font-semibold text-gray-700 mb-1'>Emergency Phone</label>
+                <input type='text' name='emergencyContactPhone' id='emergencyContactPhone' className='input-field' value={formData.emergencyContactPhone} onChange={handleChange} />
+              </div>
+            </div>
+            <div>
+              <label htmlFor='medicalConditions' className='block text-xs font-semibold text-gray-700 mb-1'>Medical Conditions</label>
+              <textarea name='medicalConditions' id='medicalConditions' className='input-field min-h-[80px]' value={formData.medicalConditions} onChange={handleChange} />
+            </div>
+          </div>
         </div>
-
-        <div>
-          <label
-            htmlFor='grade'
-            className='block text-sm font-semibold text-gray-700 mb-2'
-          >
-            Grade/Class
-          </label>
-          <input
-            type='text'
-            name='grade'
-            id='grade'
-            className='input-field'
-            value={formData.grade}
-            onChange={handleChange}
-            placeholder='e.g., Grade 10, Class A'
-          />
-        </div>
-
-        <div>
-          <label
-            htmlFor='dateOfBirth'
-            className='block text-sm font-semibold text-gray-700 mb-2'
-          >
-            Date of Birth
-          </label>
-          <input
-            type='date'
-            name='dateOfBirth'
-            id='dateOfBirth'
-            className='input-field'
-            value={formData.dateOfBirth}
-            onChange={handleChange}
-          />
-        </div>
-
-        <div>
-          <label
-            htmlFor='enrollmentDate'
-            className='block text-sm font-semibold text-gray-700 mb-2'
-          >
-            Enrollment Date *
-          </label>
-          <input
-            type='date'
-            name='enrollmentDate'
-            id='enrollmentDate'
-            required
-            className='input-field'
-            value={formData.enrollmentDate}
-            onChange={handleChange}
-          />
-        </div>
-      </div>
-
-      <div>
-        <label
-          htmlFor='familyId'
-          className='block text-sm font-semibold text-gray-700 mb-2'
-        >
-          Family *
-        </label>
-        <select
-          name='familyId'
-          id='familyId'
-          required
-          className='input-field'
-          value={formData.familyId}
-          onChange={handleChange}
-        >
-          <option value=''>Select a family</option>
-          {families.map(family => (
-            <option key={family.id} value={family.id}>
-              {family.name}{' '}
-              {family.discountAmount > 0 &&
-                `(₹${family.discountAmount} discount)`}
-            </option>
-          ))}
-        </select>
-        {families.length === 0 && (
-          <p className='mt-2 text-sm text-gray-500'>
-            No families found. Please create a family first.
-          </p>
-        )}
-      </div>
-
-      <div className='bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl p-6 border border-orange-200'>
-        <h4 className='text-xl font-bold text-gray-900 mb-4 flex items-center'>
-          <span className='w-8 h-8 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mr-3'>
-            <svg
-              className='w-4 h-4 text-white'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
-              />
-            </svg>
-          </span>
-          Course & Service Enrollment
-        </h4>
-        <p className='text-gray-600'>
-          After creating the student, you can enroll them in courses and
-          services from the student management page.
-        </p>
       </div>
 
       <div className='flex justify-end space-x-4 pt-6'>
-        <button
-          type='button'
-          onClick={onCancel}
-          className='btn-secondary'
-          disabled={loading}
-        >
-          Cancel
-        </button>
+        <button type='button' onClick={onCancel} className='btn-secondary' disabled={loading}>Cancel</button>
         <button type='submit' className='btn-primary' disabled={loading}>
-          {loading ? (
-            <div className='flex items-center'>
-              <div className='animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2'></div>
-              Saving...
-            </div>
-          ) : student ? (
-            'Update Student'
-          ) : (
-            'Create Student'
-          )}
+          {loading ? 'Saving...' : student ? 'Update Student' : 'Create Student'}
         </button>
       </div>
     </form>

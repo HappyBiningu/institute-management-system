@@ -47,11 +47,25 @@ model Family {
 model Student {
   id                    String                 @id @default(uuid())
   name                  String
+  surname               String?
+  idNumber              String?                @unique
+  gender                String?
+  ethnicity             String?
+  homeLanguage          String?
+  address               String?
+  city                  String?
+  postalCode            String?
+  phoneNumber           String?
+  email                 String?
   grade                 String?
   dateOfBirth           DateTime?
   enrollmentDate        DateTime               @default(now())
   isActive              Boolean                @default(true)
-  studentId             String?                @unique // Optional student ID number
+  studentId             String?                @unique // System generated ID
+  emergencyContactName  String?
+  emergencyContactPhone String?
+  previousSchool        String?
+  medicalConditions     String?
   createdAt             DateTime               @default(now())
   updatedAt             DateTime               @updatedAt
   family                Family                 @relation(fields: [familyId], references: [id])
