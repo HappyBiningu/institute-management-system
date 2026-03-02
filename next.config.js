@@ -74,21 +74,8 @@ const nextConfig = {
 
   // Experimental features for better performance
   experimental: {
-    // Enable modern bundling
-    esmExternals: true,
-
     // Optimize server components
-    serverComponentsExternalPackages: ['@prisma/client'],
-
-    // Enable turbo mode for faster builds
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js'
-        }
-      }
-    }
+    serverComponentsExternalPackages: ['@prisma/client']
   },
 
   // =============================================================================
